@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="ps_gm_view_users_form">
+            <field name="name">ps_gm_view_users_form</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <page name="access_rights" position="inside">
+                    <group name="access_rights" string="Extra Access Rights/Permissions" col="6">
+                        <label for="is_granite" class="oe_inline"/>
+                        <div class="oe_inline">
+                            <field name="is_granite"/>
+                            <field name="is_granite_rw"/>
+                            <field name="is_granite_rwc"/>
+                        </div>
+                        <label for="is_design" class="oe_inline"/>
+                        <div class="oe_inline">
+                            <field name="is_design"/>
+                            <field name="is_design_rw"/>
+                            <field name="is_design_rwc"/>
+                        </div>
+                        <label for="is_material" class="oe_inline"/>
+                        <div class="oe_inline">
+                            <field name="is_material"/>
+                            <field name="is_material_rw"/>
+                            <field name="is_material_rwc"/>
+                        </div>
+                        <label for="is_contract" class="oe_inline"/>
+                        <div class="oe_inline">
+                            <field name="is_contract"/>
+                            <field name="is_contract_rw"/>
+                            <field name="is_contract_rwc"/>
+                        </div>
+                        <label for="is_manufacturing" class="oe_inline"/>
+                        <div class="oe_inline">
+                            <field name="is_manufacturing"/>
+                            <field name="is_manufacturing_rw"/>
+                            <field name="is_manufacturing_rwc"/>
+                        </div>
+                        <label for="is_booking" class="oe_inline"/>
+                        <div class="oe_inline">
+                            <field name="is_booking"/>
+                            <field name="is_booking_rw"/>
+                            <field name="is_booking_rwc"/>
+                        </div>
+                    </group>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+        <!-- HR Employee Inherite -->
+        <record model="ir.ui.view" id="view_hr_employee_hr_holidays_saudi_form">
+            <field name="name">hr.employee.hr.leave.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[position()=3]" position="before">
+                    <page string="Leave" groups="hr.group_hr_user">
+                        <group>
+                            <group>
+                                <field name="basic_contract_type"/>
+                                <field name="type_id"/>
+                            </group>
+                            <group>
+                                <field name="last_vacation_date" readonly="1"/>
+                                <field name="availed_leave" invisible="1"/>
+                                <field name="accumlate_days"/>
+                                <field name="used_leave"/>
+                                <field name="balance_leave"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- HR Employee Type -->
+
+
+        <record id="view_hr_employee_type_form" model="ir.ui.view">
+            <field name="name">hr.employee.type.form</field>
+            <field name="model">hr.employee.type</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Employee Type">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="leave_start_month"/>
+                                <field name="leave_start_month_type"
+                                       attrs="{'required': [('leave_start_month', '&gt;', 0)],'invisible': [('leave_start_month', '&lt;=', 0)]}"/>
+
+                            </group>
+                            <group>
+                                <field name="annual_leave_type"/>
+                                <field name="annual_leave"/>
+                                <field name="leave_carryover_year"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="hr_employee_type_tree" model="ir.ui.view">
+            <field name="name">hr.employee.type.tree</field>
+            <field name="model">hr.employee.type</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Type" editable="top">
+                    <field name="name"/>
+                    <field name="annual_leave"/>
+                    <field name="annual_leave_type"/>
+                    <field name="leave_carryover_year"/>
+                    <field name="leave_start_month"/>
+                    <field name="leave_start_month_type"
+                           attrs="{'required': [('leave_start_month', '&gt;', 0)],'invisible': [('leave_start_month', '&lt;=', 0)]}"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_employee_type" model="ir.actions.act_window">
+            <field name="name">Employee Type</field>
+            <field name="res_model">hr.employee.type</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="hr_employee_type_tree"/>
+        </record>
+
+        <menuitem action="action_hr_employee_type" id="menu_hr_employee_type" parent="hr_holidays_saudi_config_menu"
+                  sequence="2"/>
+
+
+    </data>
+</openerp>

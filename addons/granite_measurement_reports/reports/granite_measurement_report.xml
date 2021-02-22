@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="granite_measurement_template_00">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+
+                            <h3 class="text-center">نموذج رفع مقاس رخام</h3>
+                            <br/>
+                            <br/>
+
+
+                            <div style='direction:rtl'>
+                                <div>
+                                    <div style="width:55%">
+                                        <table class="table table-bordered">
+                                            <thead>
+
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        Name
+                                                    </td>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        <span t-esc="o.name"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        Shop name
+                                                    </td>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        <span t-esc="o.shop_name"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        Customer name
+                                                    </td>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        <span t-esc="o.partner_id.name"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        Phone
+                                                    </td>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        <span t-esc="o.phone"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        Address
+                                                    </td>
+                                                    <td style="padding:4px;text-align:right;">
+                                                        <span t-esc="o.street"/>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <table class="table table-bordered">
+                                    <thead>
+
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Granite Color
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.granite_color"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Supplier company
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.supplier_company.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Type of sink
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.type_of_sink.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Depth Measurement
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.depth_measurement"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Place df depth
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.place_of_depth"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Side
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.side"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Coming Down
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.coming_down"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Side Descending Places
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.side_descending_places" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Side Slippers
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.side_slippers" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Sink measurement
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.sink_measurement"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Color of sink
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.colour_of_sink"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Depth of sink
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.depth_of_sink"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Line
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.line"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Connubial
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.connubial"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Contour
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.contour"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Contour depth
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.contour_of_depth"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Column
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.column"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                oven
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.oven" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Oven type
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.oven_type"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:4px;text-align:right;">
+                                                Printer
+                                            </td>
+                                            <td style="padding:4px;text-align:right;">
+                                                <span t-esc="o.printer"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <!-- QWeb Reports -->
+        <report
+                id="contract_preparation_report_action"
+                model="granite.measurement.details"
+                report_type="qweb-pdf"
+                string="Granite Measurement Report"
+                name="granite_measurement_reports.granite_measurement_template_00"
+                file="granite_measurement_reports.granite_measurement_template_00"
+        />
+
+    </data>
+</odoo>

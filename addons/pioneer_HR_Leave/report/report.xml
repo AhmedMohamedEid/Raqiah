@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <report
+                id="report_hr_holidays_saudi"
+                string="Holiday Report"
+                model="hr.leave"
+                report_type="qweb-pdf"
+                file="pioneer_HR_Leave.report_hr_holidays_saudi"
+                name="pioneer_HR_Leave.report_hr_holidays_saudi_document"
+        />
+
+
+    </data>
+</openerp>

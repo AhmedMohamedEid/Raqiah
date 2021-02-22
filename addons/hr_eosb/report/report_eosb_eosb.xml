@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_eosb_eosb_document">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <table border="1" style="width:100%">
+                                <colgroup>
+                                    <col style="border-right:1px solid black;width:25%"/>
+                                    <col style="border-right:1px solid black;width:25%"/>
+                                    <col style="border-right:1px solid black;width:25%"/>
+                                    <col style="width:25%"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center"
+                                            style="width:100%;border:1px solid black;background-color:#006495"
+                                            colspan="4">EOSB Report
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4" style="color:#996699">Serial No:
+                                            <span t-field="o.name"/>
+                                        </th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr style="border:1px solid black;color:#7D9C9F">
+                                        <td class="text-center">
+                                            <b>Employee</b>
+                                        </td>
+                                        <td class="text-center">
+                                            <b>Contract</b>
+                                        </td>
+                                        <td class="text-center">
+                                            <b>Type</b>
+                                        </td>
+                                        <td class="text-center">
+                                            <b>Last Worked Date</b>
+                                        </td>
+                                    </tr>
+                                    <tr style="border:1px solid black">
+                                        <td class="text-center">
+                                            <span t-field="o.employee_id"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.contract_id"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.eosb_type"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.date"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="1" style="width:100%">
+                                <colgroup>
+                                    <col style="border-right:1px solid black;width:25%"/>
+                                    <col style="border-right:1px solid black;width:25%"/>
+                                    <col style="border-right:1px solid black;width:25%"/>
+                                    <col style="width:25%"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th colspan="4" style="color:#996699">EOSB Settings</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border:1px solid black;">
+                                        <td style="color:#7D9C9F">
+                                            <b>EOSB Based</b>
+                                        </td>
+                                        <td>
+                                            <span t-field="o.eosb_based"/>
+                                        </td>
+                                        <td style="color:#7D9C9F">
+                                            <b>Employee Type</b>
+                                        </td>
+                                        <td>
+                                            <span t-field="o.eosb_emp_type_id"/>
+                                        </td>
+                                    </tr>
+                                    <tr style="border:1px solid black" t-if="o.eosb_based == 'custom'">
+                                        <td style="color:#7D9C9F">
+                                            <b>Base Payslip Rule</b>
+                                        </td>
+                                        <td colspan="3">
+                                            <table>
+                                                <tr>
+                                                    <td t-foreach="o.salary_rules_ids" t-as="rules"><span
+                                                            t-field="rules.name"/>,
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+
+                            <table style="width:100%">
+                                <colgroup>
+                                    <col style="border-right:1px solid black;width:35%"/>
+                                    <col style="border-right:1px solid black;width:30%"/>
+                                    <col style="width:35%"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center"
+                                            style="width:100%;border:1px solid black;background-color:#006495"
+                                            colspan="4">Details
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3" style="color:#996699">Personal Data
+                                            <span t-field="o.name"/>
+                                        </th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr style="border:1px solid black;color:#7D9C9F">
+                                        <td class="text-center">
+                                            <b>Date Of Joined</b>
+                                        </td>
+                                        <td class="text-center">
+                                            <b>Department</b>
+                                        </td>
+                                        <td class="text-center" style="border-right:1px solid black">
+                                            <b>Job</b>
+                                        </td>
+                                    </tr>
+                                    <tr style="border:1px solid black">
+                                        <td class="text-center">
+                                            <span t-field="o.joined_date"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.department_id"/>
+                                        </td>
+                                        <td class="text-center" style="border-right:1px solid black">
+                                            <span t-field="o.job_id"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <table style="width:100%">
+                                <colgroup>
+                                    <col style="border-right:1px solid black;width:35%"/>
+                                    <col style="border-right:1px solid black;width:30%"/>
+                                    <col style="width:35%"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th colspan="3" style="color:#996699">Salary
+                                            <span t-field="o.name"/>
+                                        </th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr style="border:1px solid black;color:#7D9C9F">
+                                        <td class="text-center">
+                                            <b>Salary</b>
+                                        </td>
+                                        <td class="text-center">
+                                            <b>Provide Balance Leave Salary</b>
+                                        </td>
+                                        <td class="text-center" style="border-right:1px solid black">
+                                            <b>Generate Current month Payslip</b>
+                                        </td>
+                                    </tr>
+                                    <tr style="border:1px solid black">
+                                        <td class="text-center">
+                                            <span t-field="o.salary"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.provide_leave_salary"/>
+                                        </td>
+                                        <td class="text-center" style="border-right:1px solid black">
+                                            <span t-field="o.gen_cur_payslip"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <table style="width:100%">
+                                <colgroup>
+                                    <col style="width:50%"/>
+                                    <col style="width:50%"/>
+
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th style="color:#996699">Payments</th>
+                                        <th style="color:#996699">Worked Duration Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <table style="width:100%">
+                                                <colgroup>
+                                                    <col style="border-right:1px solid black;width:50%"/>
+                                                    <col style="width:50%"/>
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>EOSB Amount</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.eosb_amount"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Leave Salary Amount</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.leave_salary_amount"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Other Allowance</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.other_allowance"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Gross Amount</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.gross_amount"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Other Deduction</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.other_deduction"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Total Deduction Amount</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.deduction_amount"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Net Amount</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.net_amount"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color:#7D9C9F">
+                                                            <b></b>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td>
+                                            <table style="width:100%">
+                                                <colgroup>
+                                                    <col style="border-right:1px solid black;width:50%"/>
+                                                    <col style="width:50%"/>
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Leave Type</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.leave_type_id"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Availed Leave</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.availed_leave"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Used Leave</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.used_leave"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>Balance Leave</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.balance_leave"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>No of Days Worked</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.worked_days"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>No of Months Worked</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.worked_months"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td style="color:#7D9C9F">
+                                                            <b>No of Years Worked</b>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="o.worked_years"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border:1px solid black">
+                                                        <td colspan="2">
+                                                            <b>Worked Period:</b>
+                                                            <span t-field="o.worked_period"/>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+
+        </template>
+
+
+    </data>
+</openerp>

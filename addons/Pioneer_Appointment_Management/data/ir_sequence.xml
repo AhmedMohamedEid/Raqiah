@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+    
+        <!-- HR OverTime -->
+        <record id="seq_pr_partner_appointment" model="ir.sequence">
+            <field name="name">Appointment</field>
+            <field name="code">pr.partner.appointment</field>
+    	    <field name="prefix">AP-</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</openerp>

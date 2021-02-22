@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_hr_payslip_form">
+            <field name="name">hr.payslip.eosb.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <field name='credit_note' position="after">
+                    <field name="eosb" invisible='1'/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_eo_view_hr_payslip_filter">
+            <field name="name">hr_eo_view_hr_payslip_filter</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_filter"/>
+            <field name="arch" type="xml">
+                <field name="date_from" position="after">
+                    <field name="date_to"/>
+                    <field name="state"/>
+                </field>
+                <field name="name" position="before">
+                    <field name="number"/>
+                </field>
+
+            </field>
+        </record>
+    </data>
+</openerp>

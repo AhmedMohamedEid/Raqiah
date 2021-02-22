@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <report
+                id="report_eosb_eosb"
+                string="EOSB Report"
+                model="eosb.eosb"
+                report_type="qweb-pdf"
+                file="hr_eosb.report_eosb_eosb"
+                name="hr_eosb.report_eosb_eosb_document"
+        />
+
+    </data>
+</openerp>

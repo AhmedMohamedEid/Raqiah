@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <menuitem id="menu_pr_partner_appointment_root"
+                  name="Appointment Form"
+                  parent="contacts.menu_contacts"
+                  sequence="2"/>
+            <menuitem
+                    id="menu_pr_partner_appointment_main"
+                    name="Appointments"
+                    parent="menu_pr_partner_appointment_root"
+                    sequence="1"/>
+                <menuitem
+                        id="menu_pr_partner_appointment"
+                        action="action_view_pr_partner_appointment"
+                        parent="menu_pr_partner_appointment_main"
+                        sequence="1"/>
+
+    </data>
+</openerp>

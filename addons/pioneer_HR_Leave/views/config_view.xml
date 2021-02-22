@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+   <!-- HR Leave Config -->
+        <record id="hr_official_holidays_saudi_tree" model="ir.ui.view">
+            <field name="model">hr.official.holidays.saudi</field>
+            <field name="arch" type="xml">
+                <tree string="Official Holidays" editable="top">
+                    <field name="name"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="no_days"/>
+                    <field name="state"/>
+		    <button string="Approve" name="approve" type="object" states="draft" icon="gtk-yes" groups="hr.group_hr_manager"/>
+		    <button string="Cancel" name="cancel" type="object" states="draft,approve" icon="gtk-stop" groups="hr.group_hr_manager"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_official_holidays_saudi" model="ir.actions.act_window">
+            <field name="name">Official Leave</field>
+            <field name="res_model">hr.official.holidays.saudi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="hr_official_holidays_saudi_tree"/>
+        </record> 
+
+       <menuitem action="action_hr_official_holidays_saudi" id="menu_hr_official_holidays_saudi" parent="hr_holidays_saudi_config_menu" sequence="1"/>
+
+    </data>
+</openerp>

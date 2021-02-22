@@ -1,0 +1,167 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_hr_fig_custom_filter">
+            <field name="name">hr.fig.custom.search</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <field name="name" position="attributes">
+                    <attribute name="filter_domain">
+                        ['|','|','|','|','|','|',('emp_code','ilike',self),('name_arabic','ilike',self),('mobile_phone','ilike',self),('work_phone','ilike',self),('name_arabic','ilike',self),('name','ilike',self),('expiry_detail_ids.exp_id_no','ilike',self)]
+                    </attribute>
+                    <attribute name="string">Employee Description</attribute>
+                </field>
+                <field name="name" position="after">
+                    <field name="emp_code"
+                           filter_domain="[('emp_code','ilike',self)]"/>
+                    <field name="emp_code" string="Iqama Code"
+                           filter_domain="[('expiry_detail_ids.exp_id_no','ilike',self),('expiry_detail_ids.type','=','iqama')]"/>
+                    <field name="emp_code" string="License Number"
+                           filter_domain="[('expiry_detail_ids.exp_id_no','ilike',self),('expiry_detail_ids.type','=','license')]"/>
+                    <field name="emp_code" string="Passport No."
+                           filter_domain="[('expiry_detail_ids.exp_id_no','ilike',self),('expiry_detail_ids.type','=','passport')]"/>
+                    <field name="emp_code" string="Visa"
+                           filter_domain="[('expiry_detail_ids.exp_id_no','ilike',self),('expiry_detail_ids.type','=','visa')]"/>
+                    <field name="emp_code" string="Work Permit"
+                           filter_domain="[('expiry_detail_ids.exp_id_no','ilike',self),('expiry_detail_ids.type','=','work_permit']"/>
+                    <field name="emp_code" string="Medical Insurance"
+                           filter_domain="[('expiry_detail_ids.exp_id_no','ilike',self),('expiry_detail_ids.type','=','medical_insurance')]"/>
+                </field>
+                <field name="name" position="after">
+                    <field name="name_arabic"/>
+                </field>
+                <field name="job_id" position="after">
+                    <field name="sponsor_company_id" string="Sponsor Company"/>
+                    <field name="company_id" string="Payroll Company"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_hr_employee_fig_custom_kanban" model="ir.ui.view">
+            <field name="name">hr.employee.fig.custom.kanban</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <ul>
+                        <a type="open">
+                            <li t-if="record.emp_code.raw_value">
+                                <field name="emp_code"/>
+                            </li>
+                        </a>
+
+                    </ul>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <ul>
+                        <a type="open">
+                            <li t-if="record.name_arabic.raw_value">
+                                <field name="name_arabic"/>
+                            </li>
+                        </a>
+
+                    </ul>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_hr_fig_custom_tree">
+            <field name="name">hr.fig.custom.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="emp_code"/>
+                </field>
+                <field name="name" position="after">
+                    <field name="name_arabic"/>
+                </field>
+                <field name="company_id" position="before">
+                    <field name="sponsor_company_id" string="Sponsor Company"/>
+                </field>
+
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_hr_fig_custom_form">
+            <field name="name">hr.fig.custom.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_ids']" position='replace'/>
+                <xpath expr="/form/sheet//div[@class='oe_title']" position='replace'>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Employee ID and Name"/>
+                        <h3>
+                            <field name="name" class="oe_inline" placeholder="Employee code" style="width: 6em"/>
+                            -
+                            <field name="emp_code" class="oe_inline" placeholder="Employee name"/>
+                            <field name="name_arabic" placeholder="Name in Arabic"/>
+                        </h3>
+                        <label for="category_ids"/>
+                        <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time"
+                        />
+                    </div>
+                </xpath>
+                <xpath expr="//page[@name='public']" position="attributes">
+                    <attribute name="string">Public Information</attribute>
+                </xpath>
+                <xpath expr="//page[@name='personal_information']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="emp_code_sort"/>
+                </xpath>
+                <xpath expr="//field[@name='work_phone']" position="after">
+                    <field name="aj_date"/>
+                    <field name="address_ksa"/>
+                    <field name="address_home"/>
+                    <field name="no_payroll"/>
+                </xpath>
+                <field name="country_id" position="after">
+                    <field name="religion"/>
+                </field>
+<!--
+                <field name="passport_id" position="replace"/>
+                <field name="identification_id" position="replace"/>
+-->
+                <page name="personal_information" position="after">
+                    <page name="expiry_details" string="Expiry Details" invisible="1">
+                        <group>
+                            <field name="expiry_detail_ids" widget="one2many_list" nolabel="1"/>
+                        </group>
+                    </page>
+                    <page name="family_details" string="Family Details" invisible="1">
+                        <field name="family_ids" nolabel="1">
+                            <tree string="Family Details" editable="top">
+                                <field name="name"/>
+                                <field name="name_arabic"/>
+                                <field name="iqama_no"/>
+                                <field name="dob"/>
+                                <field name="gender"/>
+                                <field name="marital"/>
+                                <field name="relation_type"/>
+                                <field name="country_id"/>
+                                <field name="sponsor_name"/>
+                                <field name="sponsor_no"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+                <field name="user_id" position="after">
+                    <field name="work_status"/>
+                </field>
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="position_classification"/>
+                </xpath>
+                <field name="company_id" position="after">
+                    <field name="sponsor_company_id"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<openerp>
+    <data>
+
+        <!-- Hr employee inherit Legal Leaves -->
+
+        <record id="view_employee_form_holidays_saudi" model="ir.ui.view">
+            <field name="name">hr.employee.form.holidays.saudi</field>
+            <field name="model">hr.employee</field>
+            <field eval="20" name="priority"/>
+            <field name="inherit_id" ref="hr_holidays.view_employee_form_leave_inherit"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//group[@groups='base.group_no_one']" position="replace">
+                    </xpath>
+                    <xpath expr="//button[@name='%(hr_holidays.act_hr_employee_holiday_request)d']" position="replace">
+                        <button name="%(act_hr_employee_holiday_request)d"
+                                type="action"
+                                class="oe_stat_button"
+                                icon="fa-calendar"
+                                groups="hr.group_hr_user">
+                            <field name="holidays_count" widget="statinfo" string="Leaves"/>
+                        </button>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+
+        <!--<delete model="ir.ui.menu" id="hr_holidays.menu_open_view_holiday_status" />
+        <delete model="ir.ui.menu" id="hr_holidays.menu_open_ask_holidays"/>
+        <delete model="ir.ui.menu" id="hr_holidays.menu_open_ask_holidays_new"/>
+        <delete model="ir.ui.menu" id="hr_holidays.menu_request_approve_holidays"/>
+        <delete model="ir.ui.menu" id="hr_holidays.menu_open_allocation_holidays"/>
+        <delete model="ir.ui.menu" id="hr_holidays.menu_request_approve_allocation"/>
+        <delete model="ir.ui.menu" id="hr_holidays.menu_open_company_allocation"/>
+        <delete model="ir.ui.menu" id="hr_holidays.menu_hr_available_holidays_report_tree"/>
+        <delete model="ir.ui.menu" id="hr_holidays.menu_account_central_journal"/>-->
+
+
+    </data>
+</openerp>

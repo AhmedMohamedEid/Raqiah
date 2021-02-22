@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_eosb_eosb_form" model="ir.ui.view">
+            <field name="name">eosb.eosb.form</field>
+            <field name="model">eosb.eosb</field>
+            <field name="arch" type="xml">
+                <form string="End of service benefits">
+                    <header>
+                        <button string="Confirm" name="action_confirm" states="draft" type="object"
+                                class="oe_highlight" groups="hr.group_hr_user"/>
+                        <button string="Validate" name="action_validate" states="confirm" type="object"
+                                groups="hr.group_hr_manager" class="oe_highlight"/>
+                        <button string="Refuse" name="action_refuse" states="confirm" type="object"
+                                groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <button string="Reset to Draft" name="action_reset" type="object"
+                                states="confirm,refuse" groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <button string="Compute Sheet" name="compute_sheet" type="object"
+                                attrs="{'invisible':['|', ('payslip_id','!=',False), ('state','!=','draft')]}"
+                                class="oe_highlight" groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <button string="Recompute Sheet" name="compute_sheet" type="object"
+                                attrs="{'invisible':['|', ('payslip_id','=',False), ('state','!=','draft')]}"
+                                class="oe_highlight" groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,validate"
+                               statusbar_colors='{"confirm":"blue","draft":"red"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id" force_save="1"/>
+                                <field name="contract_id" domain="[('employee_id','=',employee_id)]"/>
+                            </group>
+                            <group>
+                                <field name="eosb_type"/>
+                                <field name="date"/>
+                            </group>
+                        </group>
+                        <group string="EOSB Setiings">
+                            <group>
+                                <field name="eosb_based"/>
+                                <field name="rules_ids" widget="many2many_tags" placeholder="Choose custom rules"
+                                       attrs="{'invisible':[ ('eosb_based','!=','custom')]}"
+                                       options="{'limit': 10, 'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            </group>
+                            <group>
+                                <field name="eosb_emp_type_id"/>
+                                <field name="salary_rules_ids" widget="many2many_tags"
+                                       attrs="{'invisible':[ ('eosb_based','!=','custom')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="detail" string="Details">
+                                <group>
+                                    <group string="Personal Data">
+                                        <field name="joined_date"/>
+                                        <field name="department_id"/>
+                                        <field name="job_id"/>
+                                    </group>
+                                    <group string="Salary">
+                                        <field name="salary"/>
+                                        <field name="provide_leave_salary"/>
+                                        <field name="gen_cur_payslip"/>
+                                        <field name="payslip_days"
+                                               attrs="{'invisible':[('gen_cur_payslip','!=',True)]}"/>
+                                    </group>
+                                    <group string="Payments">
+                                        <field name="eosb_amount"/>
+                                        <field name="leave_salary_amount"
+                                               attrs="{'invisible':[('provide_leave_salary','!=',True)]}"/>
+                                        <field name="other_allowance"/>
+                                        <field name="gross_amount"/>
+                                        <field name="other_deduction"/>
+                                        <field name="deduction_amount"/>
+                                        <field name="net_amount"/>
+                                    </group>
+                                    <group string="Worked Duration Details">
+                                        <field name="leave_type_id"/>
+                                        <field name="availed_leave"/>
+                                        <field name="used_leave"/>
+                                        <field name="balance_leave"/>
+                                        <field name="no_days" invisible="1"/>
+                                        <field name="no_months" invisible="1"/>
+                                        <field name="no_years" invisible="1"/>
+                                        <field name="worked_days"/>
+                                        <field name="worked_months"/>
+                                        <field name="worked_years"/>
+                                        <field name="worked_period"/>
+                                    </group>
+                                </group>
+                                <field name="note" placeholder="Remarks."/>
+                            </page>
+                            <page string="Payslip Lines" attrs="{'invisible':[('payslip_id','=',False)]}">
+                                <label for="payslip_id"
+                                       string="The cancelled payslip will be create automaticaly for EOSB calculation.Don't delete that manually.."/>
+                                <group>
+                                    <field name="payslip_id" readonly="True"/>
+                                </group>
+                                <field name="payslip_line_ids" colspan="4" string="Payslip Lines" nolabel="1">
+                                    <tree string="Payslip Lines" editable="bottom">
+                                        <field name="salary_rule_id"/>
+                                        <field name="employee_id"/>
+                                        <field name="contract_id"/>
+                                        <field name="rate"/>
+                                        <field name="amount"/>
+                                        <field name="quantity"/>
+                                        <field name="total"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Current Month Payslip Lines"
+                                  attrs="{'invisible':[('gen_cur_payslip','!=',True)]}">
+                                <group>
+                                    <field name="current_month_payslip_id"/>
+                                </group>
+                                <field name="current_month_payslip_line_ids" colspan="4" string="Payslip Lines"
+                                       nolabel="1">
+                                    <tree string="Payslip Lines" editable="bottom">
+                                        <field name="salary_rule_id"/>
+                                        <field name="employee_id"/>
+                                        <field name="contract_id"/>
+                                        <field name="rate"/>
+                                        <field name="amount"/>
+                                        <field name="quantity"/>
+                                        <field name="total"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Accounting">
+                                <group>
+                                    <group>
+                                        <field name="journal_id"/>
+                                        <field name="company_id" widget="selection" groups="base.group_multi_company"/>
+                                        <field name="currency_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="move_id" readonly="1"
+                                               attrs="{'invisible':[('move_id','=',False)]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eosb_eosb_tree" model="ir.ui.view">
+            <field name="name">eosb.eosb.tree</field>
+            <field name="model">eosb.eosb</field>
+            <field name="arch" type="xml">
+                <tree string="EOSB">
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="eosb_type"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_eosb_eosb_tree" model="ir.actions.act_window">
+            <field name="name">EOSB</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">eosb.eosb</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create End of service benefits.
+                </p>
+            </field>
+        </record>
+
+
+
+        <record id="view_eosb_emp_type_form" model="ir.ui.view">
+            <field name="name">eosb.emp.type.form</field>
+            <field name="model">eosb.emp.type</field>
+            <field name="arch" type="xml">
+                <form string="EOSB Category">
+                    <header>
+                        <button string="Active" name="action_active" type="object" states="draft"/>
+                        <button string="Inactive" name="action_inactive" type="object" states="active"/>
+                        <button string="Re-Active" name="action_reactive" type="object" states="inactive"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="calculate_based"/>
+                                <field name="period_consider"/>
+                                <field name="calculation_consider"/>
+                            </group>
+                            <group>
+                                <field name="calculate_info" nolabel="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Resignation">
+                                <field name="eosb_emp_type_resignation" colspan="4" string="EOSB Category Resignation"
+                                       nolabel="1">
+                                    <tree string="Employee Resignation Type" editable="bottom">
+                                        <field name="year"/>
+                                        <field name="calculation_type"/>
+                                        <field name="value"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Termination">
+                                <field name="eosb_emp_type_termination" colspan="4" string="EOSB Category Termination"
+                                       nolabel="1">
+                                    <tree string="Employee Termination Type" editable="bottom">
+                                        <field name="year"/>
+                                        <field name="calculation_type"/>
+                                        <field name="value"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eosb_emp_type_tree" model="ir.ui.view">
+            <field name="name">eosb.emp.type.tree</field>
+            <field name="model">eosb.emp.type</field>
+            <field name="arch" type="xml">
+                <tree string="EOSB Category">
+                    <field name="name"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_eosb_emp_type_tree" model="ir.actions.act_window">
+            <field name="name">EOSB Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">eosb.emp.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create EOSB Category.
+                </p>
+            </field>
+        </record>
+
+
+
+
+    </data>
+</openerp>

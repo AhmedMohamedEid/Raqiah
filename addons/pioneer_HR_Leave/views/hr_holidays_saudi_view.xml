@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- CONFIG HR Leave Type -->
+
+        <record id="view_hr_holidays_type_saudi_form" model="ir.ui.view">
+            <field name="name">hr.holidays.type.saudi.form</field>
+            <field name="model">hr.holidays.type.saudi</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Leave Type" version="7.0">
+                    <header>
+                        <button string="Active" name="action_active" type="object" states="draft"/>
+                        <button string="Inactive" name="action_inactive" type="object" states="active"/>
+                        <button string="Re-Active" name="action_reactive" type="object" states="inactive"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="one_time_leave"/>
+                                <field name="female_only"/>
+                                <field name="is_annual"/>
+
+                            </group>
+                            <group>
+                                <field name="deduction_type"/>
+                                <field name="max_days_limit"
+                                       attrs="{'invisible': [('deduction_type','=','deduct_ot')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Pay Rules"
+                                  attrs="{'invisible': [('deduction_type','not in',('deduct_salary', 'deduct_salary_leave'))]}">
+                                <field name="salary_rule_line" context="{'active_id' : active_id}">
+                                    <tree string="Pay Rule Line" editable="bottom">
+                                        <field name="days"/>
+                                        <field name="percentage"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Leave Rules"
+                                  attrs="{'invisible': [('deduction_type','not in',('deduct_leave', 'deduct_salary_leave'))]}">
+                                <field name="leave_rule_line">
+                                    <tree string="Leave Rule Line" editable="bottom">
+                                        <field name="days"/>
+                                        <field name="percentage"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="OT Rules" attrs="{'invisible': [('deduction_type','!=','deduct_ot')]}">
+                                <field name="ot_rule_line">
+                                    <tree string="OT Rule Line" editable="bottom">
+                                        <field name="days"/>
+                                        <field name="percentage"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="hr_holidays_type_saudi_tree" model="ir.ui.view">
+            <field name="model">hr.holidays.type.saudi</field>
+            <field name="arch" type="xml">
+                <tree string="Holidays Type">
+                    <field name="name"/>
+                    <field name="deduction_type"/>
+                    <field name="one_time_leave"/>
+                    <field name="female_only"/>
+                    <field name="max_days_limit"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_holidays_type_saudi" model="ir.actions.act_window">
+            <field name="name">Leave Type</field>
+            <field name="res_model">hr.holidays.type.saudi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="hr_holidays_type_saudi_tree"/>
+        </record>
+
+        <menuitem action="action_hr_holidays_type_saudi" id="menu_hr_holidays_type_saudi"
+                  parent="hr_holidays_saudi_config_menu" sequence="3"/>
+
+        <!--  CONFIG Holidays Deductable -->
+
+        <record id="hr_holidays_deduction_summary_saudi_tree" model="ir.ui.view">
+            <field name="model">hr.holidays.deduction.summary.saudi</field>
+            <field name="arch" type="xml">
+                <tree string="Deduction Summary" editable='bottom'>
+                    <field name="employee_id"/>
+                    <field name="leave_id"/>
+                    <field name="deduction_type"/>
+                    <field name="date"/>
+                    <field name="amount"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_holidays_deduction_summary_saudi" model="ir.actions.act_window">
+            <field name="name">Deduction Summary</field>
+            <field name="res_model">hr.holidays.deduction.summary.saudi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="hr_holidays_deduction_summary_saudi_tree"/>
+        </record>
+        <menuitem action="action_hr_holidays_deduction_summary_saudi" id="menu_hr_holidays_deduction_summary_saudi"
+                  parent="hr_holidays_saudi_main_menu" sequence="4"/>
+
+        <!--  Holidays Leave From -->
+
+        <record id="view_hr_holidays_saudi_form" model="ir.ui.view">
+            <field name="name">hr.leave.form</field>
+            <field name="model">hr.leave</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Leave Request" version="7.0">
+                    <header>
+
+                        <button string="Request For DM Approval" name="action_request"
+                                help="Request For DM Approval"
+                                context="{'is_behalf_employee_id' : False}"
+                                type="object"
+                                attrs="{'invisible':[('is_show_dm_request', '=', False)]}"/>
+                        <button string="Approve By Responsible Employee" name="action_approve_behalf"
+                                help="Approve By Responsible Employee"
+                                context="{'is_behalf_employee_id' : True}"
+                                type="object"
+                                attrs="{'invisible':[('is_show_behalf_employee', '=', False)]}"/>
+                        <button string="DM Approve" name="action_confirm" type="object"
+                                class="oe_highlight" icon="gtk-yes" help="DM Approval"
+                                attrs="{'invisible':[('is_show_confirm', '=', False)]}"/>
+                        <!--<button string="Confirm" name="action_confirm_off" type="object" states="confirm"
+                                class="oe_highlight" icon="gtk-yes" groups="base.group_system"/>NO USE IN FAHAD-->
+                        <button string="HR Manager Approve" name="action_approve" type="object"
+                                attrs="{'invisible':[('is_show_hrm_approve', '=', False)]}"
+                        />
+                        <!--<button string="Approve" name="action_approve_gm" type="object" states="validate"
+                                groups="base.group_system"/>NO USE IN FAHAD-->
+                        <button string="Refuse" name="action_refuse" type="object" states="request,confirm"/>
+                        <button string="Cancel" name="action_cancel" type="object"
+                                states="draft,request,confirm,refuse,validate"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,request,confirm,validate"
+                               statusbar_colors='{"confirm":"blue","draft":"red"}'/>
+                    </header>
+                    <sheet>
+                        <label for="name" string="Note:HR-Manager Overridden the DM Approval"
+                               attrs="{'invisible':[('is_direct_hrm_approve','=',False)]}"/>
+                        <newline/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Leave Description...."/>
+                            </h1>
+                        </div>
+                        <group name="empinfo">
+                            <group name="employee">
+                                <field name="employee_id"
+                                       context="{'is_coach_form' : context.get('is_coach_form',False),'is_dm_form' : context.get('is_dm_form',False)}"/>
+                                <field name="department_id"/>
+                                <field name="request_date" readonly="1"/>
+                            </group>
+                            <group name="contract">
+                                <field name="contract_id" domain="[('employee_id', '=', employee_id)]"/>
+                                <field name="contact"/>
+                                <field name="job_id"/>
+                                <field name="is_direct_hrm_approve"
+                                       groups="hr.group_hr_manager"
+                                       states="request,confirm,validate,cancel"/>
+                            </group>
+                        </group>
+                        <group name="exceeded_leave">
+                            <field name="exceeded_leave_days"
+                                   attrs="{'invisible': [('exceeded_leave_days', '&lt;=', 0)]}"/>
+                        </group>
+
+                        <notebook name="leave_info">
+                            <page name="leave_info" string="Leave Info">
+                                <group>
+                                    <group name="from">
+                                        <field name="date_from"/>
+                                        <field name="leave_type_id" domain="[('state','=','active')]"
+                                               options="{'limit': 10, 'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                        <field name="behalf_employee_id"
+                                               options="{'limit': 10, 'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                    </group>
+                                    <group name="to">
+                                        <field name="date_to"/>
+                                        <field name="ot_hours"
+                                               attrs="{'invisible': [('deduction_type', 'not in', ('deduct_ot'))], 'required': [('deduction_type', 'in', ('deduct_ot'))]}"/>
+                                        <field name="deductable_amount"
+                                               attrs="{'invisible': ['|', ('deduction_type', 'not in', ('deduct_salary', 'deduct_salary_leave')), ('deductable_amount', '&lt;=', 0)]}"/>
+                                        <field name="deductable_days"
+                                        />
+                                        <field name="deductable_hours"
+                                               attrs="{'invisible': ['|', ('deduction_type', 'not in', ('deduct_ot')), ('deductable_hours', '&lt;=', 0)]}"/>
+                                        <field name="deduction_type" invisible='1'/>
+                                    </group>
+                                </group>
+
+                                <group name="leave_days">
+                                    <group name="oleave_days"
+                                           attrs="{'invisible': [('deduction_type', '=', 'deduct_ot')]}">
+                                        <field name="official_leave_days"/>
+                                        <field name="weekend_leave_days"/>
+                                        <field name="request_leave_days"/>
+                                        <field name="actual_leave_days"/>
+                                    </group>
+                                    <group name="rleave_days">
+                                        <field name="aj_date"/><!--options="{'datepicker':{'minDate': 0}}"-->
+                                        <field name="accumlate_days"/>
+                                        <field name="used_leave" invisible="0"/>
+                                        <field name="balance_leave"
+                                        />
+                                        <field name="is_show_dm_request" invisible="1"/>
+                                        <field name="is_show_behalf_employee" invisible="1"/>
+                                        <field name="is_show_confirm" invisible="1"/>
+                                        <field name="is_show_hrm_approve" invisible="1"/>
+                                    </group>
+                                </group>
+                                <group string="Exit/Re-Entry" col="4">
+                                    <field name="eremployee"/>
+                                    <field name="erfamily"/>
+                                </group>
+                            </page>
+                            <page name='hr_setting' string="HR Setting" groups="hr.group_hr_manager">
+                                <group>
+                                    <group>
+                                        <field name="allow_one_time_leave"/>
+                                        <field name="allow_max_days_limit"
+                                               attrs="{'invisible': [('exceeded_leave_days', '&lt;=', 0)]}"/>
+                                        <field name="execute_with_negative_leave"
+                                               attrs="{'invisible': ['|', ('deduction_type', 'not in', ('deduct_leave', 'deduct_salary_leave')), ('deductable_days', '&lt;=', 0)]}"/>
+                                        <field name="is_direct_manager" invisible='1'/>
+                                        <field name="is_coach" invisible='1'/>
+                                    </group>
+                                    <group>
+                                        <field name="excuse_salary_deduction"
+                                               attrs="{'invisible': [('deduction_type', 'not in', ('deduct_salary', 'deduct_salary_leave'))]}"/>
+                                        <field name="excuse_leave_deduction"
+                                               attrs="{'invisible': [('deduction_type', 'not in', ('deduct_leave', 'deduct_salary_leave'))]}"/>
+                                        <field name="excuse_ot_deduction"
+                                               attrs="{'invisible': [('deduction_type', '!=', 'deduct_ot')]}"/>
+                                        <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                    </group>
+
+                                </group>
+
+                                <group>
+                                    <group>
+                                        <label for="direct_manager_id"/>
+                                        <div>
+                                            <field name="direct_manager_id" class="oe_inline"/>
+                                            -
+                                            <field name="direct_manager_date" class="oe_inline"/>
+                                        </div>
+                                        <label for="hr_manager_id"/>
+                                        <div>
+                                            <field name="hr_manager_id" class="oe_inline"/>
+                                            -
+                                            <field name="hr_manager_date" class="oe_inline"/>
+                                        </div>
+
+
+                                    </group>
+                                    <group>
+                                        <label for="refused_by"/>
+                                        <div>
+                                            <field name="refused_by" class="oe_inline"/>
+                                            -
+                                            <field name="refused_date" class="oe_inline"/>
+                                        </div>
+                                    </group>
+
+                                </group>
+
+                            </page>
+                        </notebook>
+
+                        <separator string="Remarks" name="remarks"/>
+                        <newline/>
+                        <field name="note"/>
+                        <field name="direct_manager_note"/>
+                        <field name="hr_manager_note"/>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+
+            </field>
+        </record>
+
+        <!--  Holidays Leave Tree -->
+
+        <record id="view_hr_holidays_saudi_tree" model="ir.ui.view">
+            <field name="name">hr.leave.tree</field>
+            <field name="model">hr.leave</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Leave Request"
+                      decoration-danger="state=='refuse'" decoration-info="state == 'draft'"
+                      decoration-muted="state == 'cancel'" decoration-bf="state in ('request','confirm')"
+                      decoration-success="state == 'validate'">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="leave_type_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="request_leave_days"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_hr_holidays_saudi_calendar" model="ir.ui.view">
+            <field name="name">Leave Request</field>
+            <field name="model">hr.leave</field>
+            <field name="arch" type="xml">
+                <calendar string="Leave Request" color="employee_id" date_start="date_from" date_stop="date_to">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="state" invisible="1"/>
+
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_hr_holidays_saudi_filter" model="ir.ui.view">
+            <field name="name">hr.leave.filter</field>
+            <field name="model">hr.leave</field>
+            <field name="arch" type="xml">
+                <search string="Search Leave">
+                    <field name="name"/>
+                    <separator/>
+                    <filter icon="terp-check" domain="[('state','=','draft')]" string="To Request" name="draft"/>
+                    <filter icon="terp-camera_test" domain="[('state','=','request')]" string="To Confirm"
+                            name="request"/>
+                    <!--<filter icon="terp-camera_test" domain="[('state','=','off_confirm')]" string="To Approve"
+                            name="off_confirm"/>-->
+                    <filter icon="terp-camera_test" domain="[('state','in',('request','confirm'))]" string="To Approve"
+                            name="confirm"/>
+                    <filter icon="terp-camera_test" domain="[('state','in',('validate','refuse'))]" string="Validated"
+                            name="validated"/>
+                    <separator/>
+                    <filter string="My Leaves" icon="terp-personal" name="my_leaves"
+                            domain="[('employee_id.user_id','=', uid)]" help="My Leaves"/>
+                    <separator/>
+                    <!--
+                                        <filter string="My Department Leaves" icon="terp-personal+" help="My Department Leaves" domain="[('department.manager_id','=',uid)]"/>
+                                        <field name="employee_id"/>
+                                        <field name="department_id"/>
+                    -->
+                    <group expand="0" string="Group By...">
+                        <filter name="group_name" string="Description" domain="[]" context="{'group_by':'name'}"/>
+                        <filter name="group_date_from" string="Start Date" icon="terp-personal" domain="[]"
+                                context="{'group_by':'date_from'}"/>
+                        <filter name="group_employee" string="Employee" icon="terp-personal" domain="[]"
+                                context="{'group_by':'employee_id'}"/>
+                        <filter name="group_type" string="Leave Type" icon="terp-stock_symbol-selection" domain="[]"
+                                context="{'group_by':'leave_type_id'}"/>
+                        <!--
+                                                <filter string="Department" icon="terp-personal+" domain="[]" context="{'group_by':'department_id'}"/>
+                        -->
+                        <filter name="state" string="Status" icon="terp-stock_effects-object-colorize" domain="[]"
+                                context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <!-- Action-->
+
+        <record id="action_hr_holidays_saudi" model="ir.actions.act_window">
+            <field name="name">My Leave Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">['|',('employee_id.user_id', 'in', [uid]),('behalf_employee_id.user_id','in',[uid])]</field>
+            <field name="context">{'user': 'user_id','cond': 'in','val': uid}</field>
+            <field name="view_id" ref="view_hr_holidays_saudi_calendar"/>
+        </record>
+
+
+        <record id="action_hr_holidays_saudi_direct" model="ir.actions.act_window">
+            <field name="name">My Direct Team Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">['|',('employee_id.parent_id.user_id', 'in', [uid]),('behalf_employee_id.parent_id.user_id', 'in', [uid])]</field>
+            <field name="context">{'user': 'parent_id.user_id','cond': 'in'
+                ,'val': uid,'search_default_request':1,'is_dm_form':True}
+            </field>
+            <field name="view_id" ref="view_hr_holidays_saudi_tree"/>
+            <field name="search_view_id" ref="view_hr_holidays_saudi_filter"/>
+        </record>
+        <record id="action_hr_holidays_saudi_team" model="ir.actions.act_window">
+            <field name="name">My Team Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[('employee_id.coach_id.user_id', 'in', [uid])]</field>
+            <field name="context">{'user': 'id','cond': 'not in'
+                ,'val': False,'search_default_request':1, 'is_coach_form':True}
+            </field>
+            <field name="view_id" ref="view_hr_holidays_saudi_tree"/>
+            <field name="search_view_id" ref="view_hr_holidays_saudi_filter"/>
+        </record>
+        <record id="action_hr_holidays_saudi_hr" model="ir.actions.act_window">
+            <field name="name">All Request/Approval</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="context">{'user': 'id','cond': 'not in','val': False,'search_default_confirm':1}</field>
+            <field name="view_id" ref="view_hr_holidays_saudi_tree"/>
+            <field name="search_view_id" ref="view_hr_holidays_saudi_filter"/>
+        </record>
+        <record model="ir.actions.act_window" id="action_hr_holidays_saudi_summary">
+            <field name="name">Leaves Summary</field>
+            <field name="res_model">hr.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="view_hr_holidays_saudi_tree"/>
+            <field name="context">{'search_default_group_type': 1, 'search_default_validated': 1}</field>
+            <field name="search_view_id" ref="view_hr_holidays_saudi_filter"/>
+        </record>
+
+        <!-- NO USE IN FAHAD       -->
+        <record id="action_hr_holidays_saudi_officer" model="ir.actions.act_window">
+            <field name="name">Officer Approval</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="context">{'user': 'id','cond': 'not in','val': False,'search_default_confirm':1}</field>
+            <field name="view_id" ref="view_hr_holidays_saudi_tree"/>
+            <field name="search_view_id" ref="view_hr_holidays_saudi_filter"/>
+        </record>
+        <record id="action_hr_holidays_saudi_hr_gm" model="ir.actions.act_window">
+            <field name="name">G-Mgr Approval</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="context">{'user': 'id','cond': 'not in','val': False,'search_default_validated':1}</field>
+            <field name="view_id" ref="view_hr_holidays_saudi_tree"/>
+            <field name="search_view_id" ref="view_hr_holidays_saudi_filter"/>
+        </record>
+
+        <!-- Shortcuts -->
+        <record id="shortcuts_hr_holidays_saudi" model="ir.actions.act_window">
+            <field name="name">Leaves</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="src_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_employee_id': [active_id], 'default_employee_id': active_id}</field>
+            <field name="view_id" eval="view_hr_holidays_saudi_tree"/>
+        </record>
+
+        <!-- Shortcuts replaced the standard-->
+        <record id="act_hr_employee_holiday_request" model="ir.actions.act_window">
+            <field name="name">Leaves</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.leave</field>
+            <field name="src_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_employee_id': [active_id], 'default_employee_id': active_id}</field>
+            <field name="domain">[]</field>
+            <field name="view_id" eval="view_hr_holidays_saudi_tree"/>
+        </record>
+
+
+        <!-- Menu-->
+        <menuitem id="hr_holidays_saudi" action="action_hr_holidays_saudi" parent="hr_holidays_saudi_main_menu"
+                  sequence="1"/>
+
+        <menuitem id="hr_holidays_saudi_team" parent="hr_holidays_saudi_main_menu"
+                  action="action_hr_holidays_saudi_team" sequence="2" groups="base.group_user"/>
+
+        <menuitem id="hr_holidays_saudi_direct" parent="hr_holidays_saudi_main_menu"
+                  action="action_hr_holidays_saudi_direct" sequence="3" groups="base.group_user"/>
+
+        <menuitem id="hr_holidays_saudi_hr" parent="hr_holidays_saudi_main_menu"
+                  action="action_hr_holidays_saudi_hr"
+                  groups="hr.group_hr_manager" sequence="3"/>
+
+        <menuitem id="hr_holidays_saudi_officer" parent="hr_holidays_saudi_main_menu"
+                  action="action_hr_holidays_saudi_officer" sequence="2"
+                  groups="base.group_no_one"/><!--NO USE IN FAHAD-->
+
+        <menuitem id="hr_holidays_saudi_hr_gm" parent="hr_holidays_saudi_main_menu"
+                  action="action_hr_holidays_saudi_hr_gm"
+                  groups="base.group_no_one" sequence="3"/> <!--NO USE IN FAHAD-->
+
+        <menuitem id="hr_holidays_saudi_summary" name="Leaves Summary" parent="hr_holidays_saudi_main_menu"
+                  action="action_hr_holidays_saudi_summary" groups="hr.group_hr_manager" sequence="40"/>
+
+
+    </data>
+</openerp>

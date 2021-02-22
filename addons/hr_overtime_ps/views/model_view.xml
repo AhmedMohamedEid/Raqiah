@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_hr_overtime_ps_form" model="ir.ui.view">
+            <field name="name">hr.overtime.ps.form</field>
+            <field name="model">hr.overtime.ps</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="OverTime Request" version="7.0">
+                    <header>
+                        <button string="Send Request" name="action_request" type="object" states="draft"/>
+                        <button string="Confirm" name="action_confirm" type="object" class="oe_highlight" icon="gtk-yes"
+                                attrs="{'invisible':['|',('current_user', '=', False),('state','!=','request')]}"/>
+                        <button string="Approve" name="action_approve" type="object" states="confirm"
+                                groups="hr.group_hr_manager"/>
+                        <button string="Refuse" name="action_refuse" type="object" states="request,confirm"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,"
+                               statusbar_colors='{"confirm":"blue","draft":"red"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id" domain="[('user_id','in',[context.get('uid')])]"
+                                       on_change="onchange_employee_id(employee_id)"/>
+                                <field name="department_id"/>
+                                <field name="date_from" on_change="on_change_date_from_to(date_from,date_to)"/>
+                                <field name="request_hours"/>
+                            </group>
+                            <group>
+                                <field name="contract_id" domain="[('employee_id', '=', employee_id)]"/>
+                                <field name="job_id"/>
+                                <field name="date_to" on_change="on_change_date_from_to(date_from,date_to)"/>
+                                <field name="approved_hours"/>
+                            </group>
+
+                        </group>
+                        <notebook>
+                            <page string="Work Summary">
+                                <field name="overtime_summary" colspan="4" string="Work Summary" nolabel="1">
+                                    <tree string="Work Summary" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="date"/>
+                                        <field name="request_hours"/>
+                                        <field name="approved_hours" groups="hr.group_hr_user"/>
+                                    </tree>
+                                </field>
+                                <field name="note"/>
+                            </page>
+                            <page string="HR Setting" groups="hr.group_hr_manager
+">
+                                <group>
+                                    <group>
+                                        <label for="confirmed_by"/>
+                                        <div>
+                                            <field name="confirmed_by" class="oe_inline"/>
+                                            -
+                                            <field name="confirmed_date" class="oe_inline"/>
+                                        </div>
+                                        <label for="approved_by"/>
+                                        <div>
+                                            <field name="approved_by" class="oe_inline"/>
+                                            -
+                                            <field name="approved_date" class="oe_inline"/>
+                                        </div>
+                                        <label for="refused_by"/>
+                                        <div>
+                                            <field name="refused_by" class="oe_inline"/>
+                                            -
+                                            <field name="refused_date" class="oe_inline"/>
+                                        </div>
+
+
+                                    </group>
+
+                                    <group>
+                                        <field name="ot_per_hour"/>
+                                        <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                        <field name="current_user" invisible='1'/>
+
+                                    </group>
+
+                                </group>
+
+                            </page>
+                        </notebook>
+
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="view_hr_overtime_ps_tree" model="ir.ui.view">
+            <field name="name">hr.overtime.ps.tree</field>
+            <field name="model">hr.overtime.ps</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Leave Request"
+                      colors="black:state=='draft';blue:state=='request';green:state=='confirm';red:state=='refuse'">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="request_hours"/>
+                    <field name="approved_hours"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="view_hr_overtime_ps_filter" model="ir.ui.view">
+            <field name="name">hr.overtime.ps.filter</field>
+            <field name="model">hr.overtime.ps</field>
+            <field name="arch" type="xml">
+                <search string="Search OverTime">
+                    <field name="name"/>
+                    <separator/>
+                    <filter icon="terp-check" domain="[('state','=','draft')]" string="To Request" name="draft"/>
+                    <filter icon="terp-camera_test" domain="[('state','=','request')]" string="To Confirm"
+                            name="request"/>
+                    <filter icon="terp-camera_test" domain="[('state','=','confirm')]" string="To Approve"
+                            name="confirm"/>
+                    <filter icon="terp-camera_test" domain="[('state','in',('approve','refuse'))]" string="Validated"
+                            name="validate"/>
+
+
+                    <separator/>
+                    <filter string="My OverTime" icon="terp-personal" name="my_overtime"
+                            domain="[('employee_id.user_id','=', uid)]" help="My OverTime"/>
+                    <separator/>
+
+                    <group expand="0" string="Group By...">
+                        <filter name="group_name" string="Description" domain="[]" context="{'group_by':'name'}"/>
+
+                        <filter name="group_date_from" string="Date From" domain="[]"
+                                context="{'group_by':'date_from'}"/>
+                        <filter name="group_date_to" string="Date To" domain="[]" context="{'group_by':'date_to'}"/>
+                        <filter name="group_employee" string="Employee" domain="[]"
+                                context="{'group_by':'employee_id'}"/>
+                        <filter name="group_status" string="Status" domain="[]" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_hr_overtime_ps_calendar" model="ir.ui.view">
+            <field name="name">hr.overtime.ps.calendar</field>
+            <field name="model">hr.overtime.ps</field>
+            <field name="arch" type="xml">
+                <calendar string="Leave Request" color="employee_id" date_start="date_from" date_stop="date_to">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="state" invisible="1"/>
+                </calendar>
+            </field>
+        </record>
+
+
+        <!-- Action-->
+
+        <record id="action_hr_overtime_ps_my" model="ir.actions.act_window">
+            <field name="name">My OverTime</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.overtime.ps</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[('employee_id.user_id', 'in', [uid])]</field>
+            <field name="context">{'user': 'user_id','cond': 'in','val': uid}</field>
+            <field name="view_id" ref="view_hr_overtime_ps_tree"/>
+        </record>
+
+        <record id="action_hr_overtime_ps_direct" model="ir.actions.act_window">
+            <field name="name">D-Mgr Approval</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.overtime.ps</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[('employee_id.parent_id.user_id', 'in', [uid])]</field>
+            <field name="context">{'user': 'parent_id.user_id','cond': 'in','val': uid,'search_default_request':1}
+            </field>
+            <field name="view_id" ref="view_hr_overtime_ps_tree"/>
+            <field name="search_view_id" ref="view_hr_overtime_ps_filter"/>
+        </record>
+
+        <record id="action_hr_overtime_ps_hr" model="ir.actions.act_window">
+            <field name="name">HR-Mgr Approval</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.overtime.ps</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="context">{'user': 'id','cond': 'not in','val': False,'search_default_confirm':1}</field>
+            <field name="view_id" ref="view_hr_overtime_ps_tree"/>
+            <field name="search_view_id" ref="view_hr_overtime_ps_filter"/>
+        </record>
+
+
+        <!-- Menu-->
+<!--
+        <menuitem id="hr_overtime_main_menu" name="OverTime" sequence="29" parent ="hr.menu_hr_root"/>
+-->
+        <menuitem id="hr_overtime_ps_menu_my" name="My OverTime" action="action_hr_overtime_ps_my"
+                  parent="hr_overtime_main_menu" sequence="1"/>
+
+        <menuitem id="hr_overtime_ps_menu_direct" name="D-Mgr Approval" action="action_hr_overtime_ps_direct"
+                  parent="hr_overtime_main_menu" sequence="2"/>
+
+        <menuitem id="hr_overtime_ps_menu_hr" name="HR-Mgr Approval" action="action_hr_overtime_ps_hr"
+                  parent="hr_overtime_main_menu" sequence="3" groups="hr.group_hr_manager"/>
+
+
+    </data>
+</openerp>

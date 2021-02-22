@@ -1,0 +1,235 @@
+#. module: hr_overtime_ps
+#: field:hr.overtime.type.ps,name:0
+#: field:hr.overtime.ps,name:0
+msgid "Name"
+msgstr "الإسم"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,state:0
+#: field:hr.overtime.summary.ps,state:0
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.ps,state:0
+#: field:hr.overtime.summary.ps,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.ps,state:0
+msgid "Waiting for Confirm"
+msgstr "بإنتظار الإعتماد"
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.ps,state:0
+msgid "Waiting for Approval"
+msgstr "بإنتظظار الموافقة"
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.ps,state:0
+msgid "Approved"
+msgstr "موافق عليه"
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.ps,state:0
+msgid "Refused"
+msgstr "مرفوضة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.type.ps,payslip_compute_type:0
+msgid "Payslip Compute Type"
+msgstr ""
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.type.ps,payslip_compute_type:0
+msgid "Fixed"
+msgstr "ثابت"
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.type.ps,payslip_compute_type:0
+msgid "By Day"
+msgstr "باليوم"
+
+#. module: hr_overtime_ps
+#: selection:hr.overtime.type.ps,payslip_compute_type:0
+msgid "By Hour"
+msgstr "بالساعة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.type.ps,payslip_compute_value:0
+msgid "Payslip Compute Value"
+msgstr ""
+
+#. module: hr_overtime_ps
+#: field:hr.contract,overtime_type_id:0
+msgid "OverTime Type"
+msgstr "نوع العمل الإضافي"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,employee_id:0
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,contract_id:0
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,department_id:0
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,job_id:0
+msgid "Job"
+msgstr "المسمى الوظيفي"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,date_from:0
+msgid "Start Date"
+msgstr "تاريخ الإنطلاق"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,date_to:0
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,overtime_summary:0
+msgid "OverTime Summary"
+msgstr "ملخص العمل الإضافي"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,request_hours:0
+msgid "Request Hours"
+msgstr "الساعات المطلوبة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,approved_hours:0
+msgid "Approved Hours"
+msgstr "الساعات الموافق عليها"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,current_user:0
+msgid "Current User"
+msgstr "المستخدم"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,confirmed_by:0
+msgid "Confirmed By"
+msgstr "مصادقة من طرف"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,confirmed_date:0
+msgid "Confirmed Date"
+msgstr "تاريخ المصادقة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,approved_by:0
+msgid "Approved By"
+msgstr "موافقة من طرف"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,approved_date:0
+msgid "Approved Date"
+msgstr "تاريخ الموافقة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,refused_by:0
+msgid "Refused By"
+msgstr "رفضت من طرف"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,refused_date:0
+msgid "Refused Date"
+msgstr "تاريخ الرفض"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,ot_per_hour:0
+msgid "OT Per Hour Amount"
+msgstr "القيمة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,company_id:0
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.ps,note:0
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.summary.ps,overtime_id:0
+#: model:ir.ui.menu,name:hr_overtime_ps.hr_overtime_main_menu
+msgid "OverTime"
+msgstr "العمل الإضافي"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.summary.ps,name:0
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.summary.ps,date:0
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.summary.ps,request_hours:0
+msgid "Request Hours"
+msgstr "الساعات المطلوبة"
+
+#. module: hr_overtime_ps
+#: field:hr.overtime.summary.ps,approved_hours:0
+msgid "Approved Hours"
+msgstr "الساعات المعتمدة"
+
+#. module: hr_overtime_ps
+#: model:ir.actions.act_window,name:hr_overtime_ps.action_hr_overtime_ps_my
+#: model:ir.ui.menu,name:hr_overtime_ps.hr_overtime_ps_menu_my
+msgid "My OverTime"
+msgstr "العمل الإضافي خاصتي"
+
+#. module: hr_overtime_ps
+#: model:ir.actions.act_window,name:hr_overtime_ps.action_hr_overtime_ps_direct
+#: model:ir.ui.menu,name:hr_overtime_ps.hr_overtime_ps_menu_direct
+msgid "D-Mgr Approval"
+msgstr "موافقة المدير المباشر"
+
+#. module: hr_overtime_ps
+#: model:ir.actions.act_window,name:hr_overtime_ps.action_hr_overtime_ps_hr
+#: model:ir.ui.menu,name:hr_overtime_ps.hr_overtime_ps_menu_hr
+msgid "HR-Mgr Approval"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: hr_overtime_ps
+#: view:hr.overtime.ps:hr_overtime_ps.view_hr_overtime_ps_form
+msgid "Send Request"
+msgstr "إرسال الطلب"
+
+#. module: hr_overtime_ps
+#: view:hr.overtime.ps:hr_overtime_ps.view_hr_overtime_ps_form
+msgid "Confirm"
+msgstr "إعتماد"
+
+#. module: hr_overtime_ps
+#: view:hr.overtime.ps:hr_overtime_ps.view_hr_overtime_ps_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: hr_overtime_ps
+#: view:hr.overtime.ps:hr_overtime_ps.view_hr_overtime_ps_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_overtime_ps
+#: view:hr.overtime.ps:hr_overtime_ps.view_hr_overtime_ps_form
+msgid "OverTime Request"
+msgstr "طلب عمل إضافي"
+
+
+
+

@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* granite_measurement_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-09 23:28+0000\n"
+"PO-Revision-Date: 2019-12-09 23:28+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Address"
+msgstr "العنوان"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Color of sink"
+msgstr "لون الجرانيت"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Column"
+msgstr "عمود"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Coming Down"
+msgstr "نزول"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Connubial"
+msgstr "زيج"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Contour"
+msgstr "الكونتر"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Contour depth"
+msgstr "عمق الكونتر"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Customer name"
+msgstr "اسم العميل"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Depth Measurement"
+msgstr "مقاس النزول"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Depth of sink"
+msgstr "عمق الحوض"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Granite Color"
+msgstr "لون الرخام"
+
+#. module: granite_measurement_reports
+#: model:ir.actions.report,name:granite_measurement_reports.contract_preparation_report_action
+msgid "Granite Measurement Report"
+msgstr "تقرير قياس الرخام"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Line"
+msgstr "خط"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Name"
+msgstr "الاسم"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Oven type"
+msgstr "نوع الفرن"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Place df depth"
+msgstr "مكان مقاس النزول"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Printer"
+msgstr "الطابعة"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Shop name"
+msgstr "اسم  المعرض"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Side"
+msgstr "شفة"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Side Descending Places"
+msgstr "أماكن النزول الجانبى"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Side Slippers"
+msgstr "النعلات الجانبية"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Sink measurement"
+msgstr "مقاس الحوض"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Supplier company"
+msgstr "الشركة الموردة"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "Type of sink"
+msgstr "نوع الحوض"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "oven"
+msgstr "مغاسل"
+
+#. module: granite_measurement_reports
+#: model_terms:ir.ui.view,arch_db:granite_measurement_reports.granite_measurement_template_00
+msgid "نموذج رفع مقاس رخام"
+msgstr ""
+

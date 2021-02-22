@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="contract_preparation_view_form" model="ir.ui.view">
+            <field name="name">contract.preparation.form</field>
+            <field name="model">contract.preparation</field>
+            <field name="arch" type="xml">
+                <form string="Contract Preparation">
+                    <header>
+                        <button name="button_confirm" string="Confirm" type="object" states="draft"
+                                class="oe_highlight"/>
+                        <button name="button_cancel" string="Cancel" type="object" states="draft,confirm"
+                                class="oe_highlight"/>
+                        <button name="button_reset_to_draft" string="Reset To Draft" type="object"
+                                states="confirm,cancel"
+                                groups="granite_measurement.group_contract_preparation_manager"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="4" colspan="2">
+                            <field name="name" required="1" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="date" required="1" readonly="1" />
+                            <field name="first_party" required="1" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="second_party" required="1" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="sale_order_id" attrs="{'readonly':[('state','!=','draft')]}" />
+                        </group>
+                        <notebook>
+                            <page string="Contract Details">
+                                <field name="contract_preparation_line" nolabel="1" colspan="4"  attrs="{'readonly':[('state','!=','draft')]}" >
+                                    <tree string="Contract Details" editable="bottom">
+                                        <field name="name" required="1"/>
+                                        <field name="design" required="1"/>
+                                        <field name="color" required="1"/>
+                                        <field name="color_number" required="1"/>
+                                        <field name="per_meter_price"/>
+                                        <field name="total_meter"/>
+                                    </tree>
+                                    <form string="Contract Details">
+                                        <group col="4" colspan="4">
+                                            <field name="name"/>
+                                            <field name="contract_preparation_id"/>
+                                            <field name="design"/>
+                                            <field name="color"/>
+                                            <field name="color_number"/>
+                                            <field name="per_meter_price"/>
+                                            <field name="total_meter"/>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="order_total">
+                                    <field name="vat" widget="monetary"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="sub_total_contract"/>
+                                    </div>
+                                    <field name="sub_total_contract" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="total_contract"/>
+                                    </div>
+                                    <field name="total_contract" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="payment_received"/>
+                                    </div>
+                                    <field name="payment_received" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                    <div class="oe_subtotal_footer_separator oe_inline">
+                                        <label for="payment_remaining"/>
+                                    </div>
+                                    <field name="payment_remaining" nolabel="1" class="oe_subtotal_footer_separator"
+                                           widget="monetary"/>
+                                </group>
+                            </page>
+                            <page string="Other info">
+                                <group>
+                                    <field name="remarks" attrs="{'readonly':[('state','!=','draft')]}" />
+                                    <field name="description" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="contract_preparation_view_search" model="ir.ui.view">
+            <field name="name">contract.preparation.search</field>
+            <field name="model">contract.preparation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Contract Preparation">
+                    <field name="first_party"/>
+                    <field name="second_party"/>
+                    <field name="sale_order_id"/>
+
+                    <newline/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <group expand="0" string="Group By...">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="contract_preparation_view_tree" model="ir.ui.view">
+            <field name="name">contract.preparation.tree</field>
+            <field name="model">contract.preparation</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Preparation" >
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="first_party"/>
+                    <field name="second_party"/>
+                    <field name="sale_order_id"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_contract_preparation_view">
+            <field name="name">Contract Preparation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">contract.preparation</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

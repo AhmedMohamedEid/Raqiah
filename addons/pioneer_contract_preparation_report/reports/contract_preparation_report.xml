@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--Qweb Template-->
+        <template id="contract_preparation_template_00">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div dir="rtl" class="page">
+                        <h3 style="text-align:center">اتفاقية عميل</h3>
+                        <table dir="rtl" width="100%" style="border:none">
+                            <th class="text-center" width="100%">
+                                <span>رقم تسلسل:</span>
+                                <span t-esc="o.sale_order_id.name"/>
+                            </th>
+                        </table>
+                        <div class="text-right" dir="rtl">
+                            <span style="font-weight:bold;">١ -شركة أكاسيا للتجارة</span>
+                            <br></br>
+                            <span style="font-weight:bold;width:150px">٢- المكرم السيد/</span>
+                            <span t-esc="o.first_party.name" style="font-weight:bold;"/>
+                        </div>
+                        <h4 class="text-right" style="font-weight: bold">البنود</h4>
+
+                        <div class="text-right">١ -يقوم البائع بتصنيع العمل المطلوب حسب البنود الموضحة بالعقد
+                            والتصميم الموقع من قبل العميل
+                        </div>
+                        <div class="text-right">٢ -يدفع العميل في حالة توقيع العقد دفعه لا تقل عن ٥٠ ٪من قيمة
+                            الفاتورة المرفقة بالإتفاقية، على أن يقوم بدفع
+                            باقي المبلغ قبل التركيب بأسبوعين
+                        </div>
+                        <div class="text-right">٣ -يتعهد البائع بتسليم العمل المطلوب إلى العميل في مدة
+                            أسبوعين من تاريخ إستلام أخر دفعة
+                            مالية للأعمال المقدمة
+                        </div>
+                        <div class="text-right">٤ -لا يحق للطرف الثاني استرداد المبالغ المدفوعة من قيمة الأعمال
+                            المطلوبة بعد توقيع العقد
+                        </div>
+                        <div class="text-right">٥ -كافة أعمال السباكة والكهرباء يتحمل كافة متطلباتها العميل
+                            حيث يتم التصنيع بناءاً على التصميم
+                            المرفق في العقد والذي يعد جزءا من التعاقد
+                        </div>
+                        <div class="text-right">٦ -في حالة تأخير العميل عن استلام المطبخ خلال فترة أقصاها
+                            (٦٠يوم) لا يحق له المطالبة بالمطبخ او
+                            القيمة المدفوعة لتنفيذ الأعمال المطلوبة
+                        </div>
+                        <div class="text-right">٧ -يتم تركيب الرخام بعد أسبوع من تركيب كافة أعمال الألومنيوم</div>
+                        <div class="text-right">٨ -فى حالة شراءالأجهزة الكهربائية من خارج المعرض يقوم العميل بإبلاغ
+                            المعرض بمقاسات الأجهزة وعند اختلاف المقاسات بتحمل العميل رسوم التعديل فى حالة الاحتياج إليه
+                        </div>
+                        <div class="text-right">٩ -يتحمل العميل أى تكاليف تترتب على أى تعديلات على التصميم بعد توقيع
+                            العقد ويتم التعديل فى مدة أقصاها (٣) أيام من التعاقد
+                        </div>
+
+                        <h4 class="text-right" style="font-weight: bold">المواصفات</h4>
+                        <table dir="rtl" class="table" style="border:2px solid gray">
+                            <thead>
+                                <tr style="text-align:center;border:2px solid gray">
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">الحوض</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">الشفة</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">النزول</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="15%">لون الرخام</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">المفصلات</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">القاعدة</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">الدرفة</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="15%">رقم اللون</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="15%">نوع المطبخ</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">الماسكة</td>
+                                    <td style="border:2px solid gray; text-align:center;" width="7%">الرف</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border:2px solid gray;">
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.houd"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.shifa"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.nozol"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.color"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.hinges"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.base"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.dalfa"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.number"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.kitchen_type"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.chatter"/>
+                                    </td>
+                                    <td style="border:2px solid gray; text-align:center;">
+                                        <span t-att-style="style" t-esc="o.sheelf"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4 class="text-right" style="font-weight: bold">الإضافات</h4>
+                        <div class="text-right">
+                            <t t-esc="o.remarks" style="font-weight:bold"/>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <!--<h4 class="text-right" style="font-weight: bold">القيمة المالية</h4>
+                        <table dir="rtl" class="table  table-bordered">
+                            <thead>
+                                <tr class="text-right">
+                                    <th class="text-right" style="font-weight: bold">القيمة الإجمالية للتقاعد</th>
+                                    <th class="text-right">ضريبة القيمة المضافة %15</th>
+                                    <th class="text-right">القيمة المالية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td class="text-right">
+                                    <span style="font-weight: bold" t-esc="o.total_value_of_contract"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="o.value_added_tax"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="o.financial_value"/>
+                                </td>
+                            </tbody>
+                        </table>-->
+                        <table dir="rtl" width="100%" style="border:none">
+                            <tr width="100%">
+                                <td style="text-align:center" width="50%">
+                                    <span>توقيع العميل</span>
+                                </td>
+                                <td style="text-align:center" width="50%">
+                                    <span>توقيع البائع</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+
+        <!-- QWeb Reports -->
+        <report
+                id="contract_preparation_report_action"
+                model="contract.preparation"
+                report_type="qweb-pdf"
+                string="Contract Preparation"
+                name="pioneer_contract_preparation_report.contract_preparation_template_00"
+                file="pioneer_contract_preparation_report.contract_preparation_template_00"
+        />
+
+    </data>
+</odoo>

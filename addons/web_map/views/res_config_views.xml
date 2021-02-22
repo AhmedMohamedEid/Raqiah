@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_map_config_settings" model="ir.ui.view">
+        <field name="name">Map_settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='module_auth_oauth']" position="before">
+                <div class="col-12 col-lg-6 o_setting_box" id="google_maps">
+                    <div class="o_setting_left_pane">
+                        <field name="is_enable_google_maps"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label string="Google Maps" for="is_enable_google_maps"/>
+                        <div class="text-muted">
+                            Google Maps API Key
+                        </div>
+                        <div class="content-group mt16" attrs="{'invisible': [('is_enable_google_maps','=',False)]}">
+                            <div class="row ">
+                                <label for="google_maps_api_key" string="API KEY:" class="col-lg-3 o_light_label"/>
+                                <field name="google_maps_api_key"
+                                       placeholder="e.g. 1234-xyz.apps.googleusercontent.com"/>
+                            </div>
+                            <a href="https://console.developers.google.com/flows/enableapi?apiid=maps_backend,static_maps_backend&amp;keyType=CLIENT_SIDE&amp;reusekey=true"
+                               target="_blank"><i class="fa fa-fw fa-arrow-right"/>Follow the instructions to create
+                                your key.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

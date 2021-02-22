@@ -1,0 +1,778 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_eosb
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-09 11:24+0000\n"
+"PO-Revision-Date: 2017-04-09 11:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_eosb
+#: model:ir.actions.act_window,help:hr_eosb.action_eosb_emp_type_tree
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create EOSB Category.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create EOSB Category.\n"
+"              </p>\n"
+"            "
+
+#. module: hr_eosb
+#: model:ir.actions.act_window,help:hr_eosb.action_eosb_eosb_tree
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create End of service benefits.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create End of service benefits.\n"
+"              </p>\n"
+"            "
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "Accounting"
+msgstr "المالية"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+#: selection:eosb.emp.type,state:0
+msgid "Active"
+msgstr "مفعلة"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type,calculation_consider:0
+msgid "Actual Year"
+msgstr "السنة الفعلية"
+
+#. module: hr_eosb
+#: field:eosb.eosb,availed_leave:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Availed Leave"
+msgstr "الإجازات المتاحة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,balance_leave:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Balance Leave"
+msgstr "رصيد الإجازات"
+
+#. module: hr_eosb
+#: field:eosb.eosb,salary_rules_ids:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Base Payslip Rule"
+msgstr "بناء علي قاعجة الراتب الاساسي"
+
+#. module: hr_eosb
+#: selection:eosb.eosb,eosb_based:0
+msgid "By Custom"
+msgstr "بواسطة التعديل"
+
+#. module: hr_eosb
+#: selection:eosb.eosb,eosb_based:0
+msgid "By Net"
+msgstr "بالصافي الراتب"
+
+#. module: hr_eosb
+#: selection:eosb.eosb,eosb_based:0
+msgid "By Wage"
+msgstr "حسب الاجر"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,calculation_consider:0
+msgid "Calculation Consider"
+msgstr "حسب المعتمد"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,calculate_based:0
+msgid "Calculation Consider By Bulk of Year"
+msgstr "حساب النظر في الجزء الأكبر من السنة"
+
+#. module: hr_eosb
+#: field:eosb.emp.type.resignation,calculation_type:0
+#: field:eosb.emp.type.termination,calculation_type:0
+msgid "Calculation Type"
+msgstr "نوع الحساب"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "Choose custom rules"
+msgstr "اختيار قواعد معدلة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,company_id:0
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "Compute Sheet"
+msgstr "حساب الورقة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: selection:eosb.eosb,state:0
+msgid "Confirm"
+msgstr "مؤكد"
+
+#. module: hr_eosb
+#: field:eosb.eosb,contract_id:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,create_uid:0
+#: field:eosb.emp.type.resignation,create_uid:0
+#: field:eosb.emp.type.termination,create_uid:0
+#: field:eosb.eosb,create_uid:0
+msgid "Created by"
+msgstr "تم انشاؤه بواسطة من"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,create_date:0
+#: field:eosb.emp.type.resignation,create_date:0
+#: field:eosb.emp.type.termination,create_date:0
+#: field:eosb.eosb,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: hr_eosb
+#: field:eosb.eosb,currency_id:0
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,current_month_payslip_id:0
+msgid "Current Month Payslip"
+msgstr "براتب الشهر الحالي"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: field:eosb.eosb,current_month_payslip_line_ids:0
+msgid "Current Month Payslip Lines"
+msgstr "بخطوط راتب الشهر الحالي"
+
+#. module: hr_eosb
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Date Of Joined"
+msgstr "تاريخ الالتحاق"
+
+#. module: hr_eosb
+#: field:eosb.eosb,joined_date:0
+msgid "Date of Joined"
+msgstr "تاريخ الالتحاق"
+
+#. module: hr_eosb
+#: help:eosb.eosb,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Date of the last message posted on the record."
+
+#. module: hr_eosb
+#: field:eosb.eosb,payslip_days:0
+msgid "Days"
+msgstr "الأيام"
+
+#. module: hr_eosb
+#: field:eosb.eosb,department_id:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Department"
+msgstr "الأدارة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,display_name:0
+#: field:eosb.emp.type.resignation,display_name:0
+#: field:eosb.emp.type.termination,display_name:0
+#: field:eosb.eosb,display_name:0
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type,state:0
+#: selection:eosb.eosb,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_tree
+#: field:hr.payslip,eosb:0
+#: model:ir.actions.act_window,name:hr_eosb.action_eosb_eosb_tree
+#: model:ir.ui.menu,name:hr_eosb.menu_eosb_eosb
+msgid "EOSB"
+msgstr "مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,eosb_amount:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "EOSB Amount"
+msgstr "مبلغ مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,eosb_based:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "EOSB Based"
+msgstr "مكافأة نهاية الخدمة عن طريق"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_tree
+#: field:eosb.emp.type.resignation,eosb_emp_type_resignation_id:0
+#: field:eosb.emp.type.termination,eosb_emp_type_termination_id:0
+#: field:eosb.eosb,eosb_emp_type_id:0
+#: field:hr.employee,eosb_emp_type_id:0
+#: model:ir.actions.act_window,name:hr_eosb.action_eosb_emp_type_tree
+#: model:ir.ui.menu,name:hr_eosb.menu_eosb_emp_type
+msgid "EOSB Category"
+msgstr "انواع مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+msgid "EOSB Category Resignation"
+msgstr "فئة الاستقالة مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+msgid "EOSB Category Termination"
+msgstr "EOSB Category Termination"
+
+#. module: hr_eosb
+#: field:hr.payslip,eosb_days:0
+msgid "EOSB Days"
+msgstr "الأيام مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: field:res.company,eosb_eosb_journal_id:0
+msgid "EOSB Journal"
+msgstr "يومية مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: model:ir.actions.report.xml,name:hr_eosb.report_eosb_eosb
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "EOSB Report"
+msgstr "تقرير مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "EOSB Setiings"
+msgstr "إعدادات مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "EOSB Settings"
+msgstr "إعدادات مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: model:ir.model,name:hr_eosb.model_eosb_eosb
+msgid "Email Thread"
+msgstr "تهديد البريد الإلكتروني"
+
+#. module: hr_eosb
+#: field:eosb.eosb,employee_id:0
+#: model:ir.model,name:hr_eosb.model_hr_employee
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+#: field:eosb.emp.type,eosb_emp_type_resignation:0
+msgid "Employee Resignation Type"
+msgstr "نوع استقالة الموظف"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+#: field:eosb.emp.type,eosb_emp_type_termination:0
+msgid "Employee Termination Type"
+msgstr "نوع اقالة الموظف"
+
+#. module: hr_eosb
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Employee Type"
+msgstr "نوع الموظف"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "End of service benefits"
+msgstr "مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type,calculation_consider:0
+#: selection:eosb.emp.type,period_consider:0
+msgid "Even Days"
+msgstr "حتي ايام"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type,calculation_consider:0
+#: selection:eosb.emp.type,period_consider:0
+msgid "Even Months"
+msgstr "حتي الشهور"
+
+#. module: hr_eosb
+#: view:hr.employee:hr_eosb.view_hr_employee_common_ps
+msgid "False"
+msgstr "خطأ"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type.resignation,calculation_type:0
+#: selection:eosb.emp.type.termination,calculation_type:0
+msgid "Fixed"
+msgstr "ثابت"
+
+#. module: hr_eosb
+#: field:eosb.eosb,message_follower_ids:0
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_eosb
+#: field:eosb.eosb,journal_id:0
+msgid "Force Journal"
+msgstr "يومية"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type.resignation,calculation_type:0
+#: selection:eosb.emp.type.termination,calculation_type:0
+msgid "Fraction"
+msgstr "كسور"
+
+#. module: hr_eosb
+#: field:eosb.eosb,gen_cur_payslip:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Generate Current month Payslip"
+msgstr "انشاء راتب الشهر الحالي"
+
+#. module: hr_eosb
+#: field:eosb.eosb,gross_amount:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Gross Amount"
+msgstr "المبلغ الأجمالي"
+
+#. module: hr_eosb
+#: help:eosb.eosb,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: hr_eosb
+#: field:eosb.emp.type,id:0
+#: field:eosb.emp.type.resignation,id:0
+#: field:eosb.emp.type.termination,id:0
+#: field:eosb.eosb,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_eosb
+#: help:eosb.eosb,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+#: selection:eosb.emp.type,state:0
+msgid "Inactive"
+msgstr "غير فعال"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,calculate_info:0
+msgid "Info"
+msgstr "معلومات"
+
+#. module: hr_eosb
+#: code:addons/hr_eosb/models/model.py:237
+#, python-format
+msgid "Invalid Days"
+msgstr "الأيام الغير فعالة"
+
+#. module: hr_eosb
+#: code:addons/hr_eosb/models/model.py:418
+#, python-format
+msgid "Invalid Value !"
+msgstr "قيمة غير فعالة!"
+
+#. module: hr_eosb
+#: field:eosb.eosb,message_is_follower:0
+msgid "Is a Follower"
+msgstr "هل هو متابع"
+
+#. module: hr_eosb
+#: field:eosb.eosb,job_id:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,move_id:0
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: hr_eosb
+#: field:eosb.eosb,message_last_post:0
+msgid "Last Message Date"
+msgstr "اخر رسالة"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,__last_update:0
+#: field:eosb.emp.type.resignation,__last_update:0
+#: field:eosb.emp.type.termination,__last_update:0
+#: field:eosb.eosb,__last_update:0
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,write_uid:0
+#: field:eosb.emp.type.resignation,write_uid:0
+#: field:eosb.emp.type.termination,write_uid:0
+#: field:eosb.eosb,write_uid:0
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,write_date:0
+#: field:eosb.emp.type.resignation,write_date:0
+#: field:eosb.emp.type.termination,write_date:0
+#: field:eosb.eosb,write_date:0
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_eosb
+#: field:eosb.eosb,date:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Last Worked Date"
+msgstr "اخر يوم عمل "
+
+#. module: hr_eosb
+#: field:eosb.eosb,leave_salary_amount:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Leave Salary Amount"
+msgstr "مبلغ راتب الأجازة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,leave_type_id:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Leave Type"
+msgstr "نوع الاجازة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,message_ids:0
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_eosb
+#: help:eosb.eosb,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,name:0
+msgid "Name"
+msgstr "الأسم"
+
+#. module: hr_eosb
+#: field:eosb.eosb,net_amount:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Net Amount"
+msgstr "صافي المبلغ"
+
+#. module: hr_eosb
+#: field:eosb.eosb,no_days:0
+#: field:eosb.eosb,worked_days:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "No of Days Worked"
+msgstr "عدد الايام العمل "
+
+#. module: hr_eosb
+#: field:eosb.eosb,no_months:0
+#: field:eosb.eosb,worked_months:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "No of Months Worked"
+msgstr "عدد شهور العمل "
+
+#. module: hr_eosb
+#: field:eosb.eosb,no_years:0
+#: field:eosb.eosb,worked_years:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "No of Years Worked"
+msgstr "عدد سنوات العمل "
+
+#. module: hr_eosb
+#: field:eosb.eosb,other_allowance:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Other Allowance"
+msgstr "بدلات اخري"
+
+#. module: hr_eosb
+#: field:eosb.eosb,other_deduction:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Other Deduction"
+msgstr "خصومات اخري"
+
+#. module: hr_eosb
+#: model:ir.model,name:hr_eosb.model_hr_payslip
+msgid "Pay Slip"
+msgstr "الراتب"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Payments"
+msgstr "الدفعات"
+
+#. module: hr_eosb
+#: field:eosb.eosb,payslip_id:0
+msgid "Payslip"
+msgstr "الراتب"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: field:eosb.eosb,payslip_line_ids:0
+msgid "Payslip Lines"
+msgstr "خطوط الراتب"
+
+#. module: hr_eosb
+#: field:eosb.eosb,rules_ids:0
+msgid "Payslip Rule"
+msgstr "قاعدة الراتب"
+
+#. module: hr_eosb
+#: field:hr.payslip,eosb_rules_ids:0
+msgid "Payslip Rule EOSB"
+msgstr "قاعدة راتب مكافأة نهاية الخدمة"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type.resignation,calculation_type:0
+#: selection:eosb.emp.type.termination,calculation_type:0
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: hr_eosb
+#: code:addons/hr_eosb/models/model.py:456
+#: code:addons/hr_eosb/models/model.py:469
+#, python-format
+msgid "Percentage value should be less than or equal 100"
+msgstr "يجب أن تكون القيمة المئوية أقل من أو تساوي 100"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type,calculation_consider:0
+msgid "Period Consider Year"
+msgstr "فترة النظر السنة"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,period_consider:0
+msgid "Period Consider for Case Selection"
+msgstr "فترة النظر في اختيار القضية"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Personal Data"
+msgstr "المعلومات الشخصية"
+
+#. module: hr_eosb
+#: code:addons/hr_eosb/models/model.py:261
+#, python-format
+msgid "Please assign 'EOSB Category' for this employee"
+msgstr "يرجى تعيين فئة مكافأة نهاية الخدمة لهذا الموظف"
+
+#. module: hr_eosb
+#: code:addons/hr_eosb/models/model.py:308
+#, python-format
+msgid "Please set the home address for employee"
+msgstr "يرجى تعيين عنوان المنزل للموظف"
+
+#. module: hr_eosb
+#: field:eosb.eosb,provide_leave_salary:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Provide Balance Leave Salary"
+msgstr "توفير راتب إجازة الرصيد"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+msgid "Re-Active"
+msgstr "اعادة تفعيل"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "Recompute Sheet"
+msgstr "اعادة حساب الورقة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_eosb
+#: selection:eosb.eosb,state:0
+msgid "Refused"
+msgstr "مرفوضه"
+
+#. module: hr_eosb
+#: field:eosb.eosb,note:0
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "Remarks."
+msgstr "ملاحظات."
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "Reset to Draft"
+msgstr "اعادتها الي مسودة"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+#: selection:eosb.eosb,eosb_type:0
+msgid "Resignation"
+msgstr "الأستقالة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: field:eosb.eosb,salary:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Salary"
+msgstr "الراتب"
+
+#. module: hr_eosb
+#: field:eosb.eosb,name:0
+msgid "Serial"
+msgstr "مسلسل"
+
+#. module: hr_eosb
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Serial No:"
+msgstr "رقم المسلسل:"
+
+#. module: hr_eosb
+#: help:eosb.eosb,payslip_days:0
+msgid "Specify if want generate payslip for corresponding days"
+msgstr "حدد ما إذا كنت تريد إنشاءقسيمة الراتب للأيام المقابلة"
+
+#. module: hr_eosb
+#: field:eosb.emp.type,state:0
+#: field:eosb.eosb,state:0
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,message_summary:0
+msgid "Summary"
+msgstr "ملخص"
+
+#. module: hr_eosb
+#: view:eosb.emp.type:hr_eosb.view_eosb_emp_type_form
+#: selection:eosb.eosb,eosb_type:0
+msgid "Termination"
+msgstr "إقالة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+msgid "The cancelled payslip will be create automaticaly for EOSB calculation.Don't delete that manually.."
+msgstr "وسوف يتم إنشاء قسيمة إلغاء الملغاة إنشاء أوتوماتيكيا لحساب مكافأة نهاية الخدمة. لا حذف ذلك يدويا.."
+
+#. module: hr_eosb
+#: code:addons/hr_eosb/models/model.py:227
+#, python-format
+msgid "The employee must be have a Home Address and Home Address must be have a Account Payable."
+msgstr "يجب أن يكون الموظف عنوان المنزل وعنوان المنزل يجب أن يكون لها حساب الدفع. "
+
+#. module: hr_eosb
+#: help:res.company,eosb_eosb_journal_id:0
+msgid "The journal used when the EOSB is done."
+msgstr "اليومية مستخدمة في حالة تم الانتهاء من مكافأة نهاية الخدمة."
+
+#. module: hr_eosb
+#: field:eosb.eosb,deduction_amount:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Total Deduction Amount"
+msgstr "اجمالي قيمة الخصومات"
+
+#. module: hr_eosb
+#: field:eosb.eosb,eosb_type:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_eosb
+#: field:eosb.eosb,message_unread:0
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,used_leave:0
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Used Leave"
+msgstr "الأجازات المستخدمة"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: selection:eosb.eosb,state:0
+msgid "Validate"
+msgstr "تحقق"
+
+#. module: hr_eosb
+#: field:eosb.emp.type.resignation,value:0
+#: field:eosb.emp.type.termination,value:0
+msgid "Value"
+msgstr "القيمة"
+
+#. module: hr_eosb
+#: field:eosb.eosb,website_message_ids:0
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: hr_eosb
+#: help:eosb.eosb,website_message_ids:0
+msgid "Website communication history"
+msgstr "Website communication history"
+
+#. module: hr_eosb
+#: view:eosb.eosb:hr_eosb.view_eosb_eosb_form
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Worked Duration Details"
+msgstr "تفاصيل مدة العمل"
+
+#. module: hr_eosb
+#: field:eosb.eosb,worked_period:0
+msgid "Worked Period"
+msgstr "فترة العمل "
+
+#. module: hr_eosb
+#: view:website:hr_eosb.report_eosb_eosb_document
+msgid "Worked Period:"
+msgstr "فترة العمل :"
+
+#. module: hr_eosb
+#: field:eosb.emp.type.resignation,year:0
+#: field:eosb.emp.type.termination,year:0
+msgid "Year"
+msgstr "السنة"
+
+#. module: hr_eosb
+#: selection:eosb.emp.type,period_consider:0
+msgid "Years Only"
+msgstr "السنوات فقط"
+
+#. module: hr_eosb
+#: sql_constraint:eosb.eosb:0
+msgid "You cannot create EOSB more than once for each Employee!"
+msgstr "لا يمكنك انشاء اكثر من مكافأة نهاية خدمة لموظف واحد!"
+
+#. module: hr_eosb
+#: code:addons/hr_eosb/models/model.py:249
+#: code:addons/hr_eosb/models/model.py:440
+#, python-format
+msgid "You cannot delete record which is not in Draft."
+msgstr "لا يمكنك مسح حركةاذا لم تكن في حالة مسودة."

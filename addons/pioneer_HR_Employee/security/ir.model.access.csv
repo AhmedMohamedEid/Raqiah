@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_family_details,hr.family.details,model_hr_family_details,hr.group_hr_manager,1,1,1,1
+access_hr_family_details_emp,hr.family.details,model_hr_family_details,base.group_user,1,1,1,0
+,,,,,,,
+access_hr_expiry_details_emp,hr.expiry.details,model_hr_expiry_details,base.group_user,1,1,1,0
+access_hr_expiry_details,hr.expiry.details,model_hr_expiry_details,hr.group_hr_manager,1,1,1,1
+,,,,,,,
+access_hr_id_type_user,hr_id_type,model_hr_id_type,base.group_user,1,1,1,0
+access_hr_id_type_manager,hr_id_type,model_hr_id_type,hr.group_hr_manager,1,1,0,1
+,,,,,,,
+access_hr_payslip_user,hr_payslip,hr_payroll.model_hr_payslip,base.group_user,1,1,1,0

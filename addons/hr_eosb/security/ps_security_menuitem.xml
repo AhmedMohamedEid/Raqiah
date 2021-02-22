@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+        <menuitem name="EOSB" id="menu_eosb_eosb" action="action_eosb_eosb_tree"
+                  sequence="5"
+                  parent ="hr.menu_hr_root"/>
+                  <!--parent="pioneer_HR_Employee.ps_menu_employee_self_services"/>-->
+
+        <menuitem name="EOSB Category" id="menu_eosb_emp_type"
+                  action="action_eosb_emp_type_tree" sequence="4"
+                  parent="hr.menu_human_resources_configuration"/>
+    </data>
+</openerp>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="ps_ir_cron_employee_id_expiry" model="ir.cron">
+            <field name="name">Reminder Scheduler To Employee About ID Expiry</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="state">code</field>
+            <field name="code">model.run_reminder_about_employee_id_expiry()</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="hr.model_hr_employee"/>
+            <field eval="'_do_mail'" name="function"/>
+            <field eval="'()'" name="args"/>
+        </record>
+
+        <record id="ps_ir_cron_list_employee_ids_expiry" model="ir.cron">
+            <field name="name">Reminder Scheduler To Manager About ID Expiry</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="state">code</field>
+            <field name="code">model.run_reminder_about_list_employee_ids_expiry()</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall"/>
+            <field name="model_id" ref="hr.model_hr_employee"/>
+            <field eval="'_do_mail'" name="function"/>
+            <field eval="'()'" name="args"/>
+        </record>
+
+    </data>
+</odoo>

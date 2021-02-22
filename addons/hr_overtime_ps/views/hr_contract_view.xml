@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+<!--
+	<record id="view_hr_overtime_type_ps_form" model="ir.ui.view">
+	    <field name="name">hr.overtime.type.ps.form</field>
+	    <field name="model">hr.overtime.type.ps</field>
+	    <field name="type">form</field>
+	    <field name="arch" type="xml">
+		<form string="OverTime Types" version="7.0">
+		<sheet>
+                <div class="oe_title">
+                    <h1>
+                        <label for="name"/>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+                </div>
+		<group>
+			<group>
+		            <field name="payslip_compute_type"/>
+			</group>
+			<group>
+		            <field name="payslip_compute_value"/>
+			</group>
+			
+		</group>
+		</sheet>
+
+		</form>
+
+	</field>
+	</record>
+
+
+
+        <record id="hr_overtime_type_ps_tree" model="ir.ui.view">
+	    <field name="name">hr.overtime.type.ps.tree</field>
+            <field name="model">hr.overtime.type.ps</field>
+            <field name="arch" type="xml">
+                <tree string="OverTime Types">
+		            <field name="name"/>
+		            <field name="payslip_compute_type"/>
+		            <field name="payslip_compute_value"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_overtime_type_ps" model="ir.actions.act_window">
+            <field name="name">OverTime Types</field>
+            <field name="res_model">hr.overtime.type.ps</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="hr_overtime_type_ps_tree"/>
+        </record> 
+
+        <record id="hr_contract_view_form_ot" model="ir.ui.view">
+            <field name="name">hr.contract.view.form.ot</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="working_hours" position="after">
+                        <field name="overtime_type_id"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+-->
+    </data>
+</openerp>

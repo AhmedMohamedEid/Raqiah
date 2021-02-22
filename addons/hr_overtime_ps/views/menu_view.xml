@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+	<menuitem id="hr_overtime_main_menu" name="OverTime" sequence="29" parent ="hr.menu_hr_root"/>
+
+    </data>
+</openerp>

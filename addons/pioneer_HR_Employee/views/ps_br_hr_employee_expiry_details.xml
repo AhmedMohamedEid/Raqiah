@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+        <!--Expiry DETIALS tree-->
+        <record id="ce_hr_employee_expiry_details_kanban" model="ir.ui.view">
+            <field name="name">ce_hr_employee_expiry_details_kanban</field>
+            <field name="model">hr.expiry.details</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <kanban string="Expiry Details">
+                    <field name="exp_id_no"/>
+                    <field name="type"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <a t-if="!read_only_mode" type="delete"
+                                   class="pull-right"/>
+
+                                <div class="oe_kanban_details">
+                                    <field name="exp_id_no"/>
+                                    <field name="type"/>
+
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+
+            </field>
+        </record>
+        <record id="ce_hr_employee_expiry_details_tree" model="ir.ui.view">
+            <field name="name">ce_hr_employee_expiry_details_tree</field>
+            <field name="model">hr.expiry.details</field>
+            <field name="arch" type="xml">
+                <tree string="Expiry Details">
+                    <field name="type"/>
+                    <field name="exp_id_no"/>
+                    <field name="issue_date"/>
+                    <field name="expiry_date"/>
+                    <field name="is_reminder"/>
+                    <field name="issue_place"/>
+                    <field name="issue_by"/>
+                    <field name="status"/>
+                    <field name="note" colspan="4"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ce_hr_employee_expiry_details_form" model="ir.ui.view">
+            <field name="name">ce_hr_employee_expiry_details_form</field>
+            <field name="model">hr.expiry.details</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Expiry Details">
+                    <group col="4">
+                        <field name="type"/>
+                        <field name="exp_id_no"/>
+                        <field name="issue_date"/>
+                        <field name="expiry_date"/>
+                        <field name="is_reminder"/>
+                        <field name="issue_place"/>
+                        <field name="issue_by"/>
+                        <field name="visa_type" attrs="{'invisible' : [('type', '!=', 'visa')]}"/>
+                        <field name="visa_exit_date" attrs="{'invisible' : [('type', '!=', 'visa')]}"/>
+                        <newline/>
+                        <field name="file" filename="filename"
+                               placeholder="Choose a file to attach..."/>
+                        <field name="status"/>
+                        <field name="filename" invisible="1"/>
+                        <field name="note" colspan="4"/>
+                    </group>
+                </form>
+
+            </field>
+        </record>
+        <record id="action_ce_hr_employee_expiry_details" model="ir.actions.act_window">
+            <field name="name">Expiry Details</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.expiry.details</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create Expiry Detail for this employee
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

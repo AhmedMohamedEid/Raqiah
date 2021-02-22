@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_granite_measurements_root" name="Granite Measurement"
+                  sequence="2"/>
+
+        <menuitem name="Granite Measurement" id="menu_granite_measurement"
+                  parent="menu_granite_measurements_root" action="action_granite_measurement"
+                  sequence="3"/>
+
+        <menuitem name="Design Confirmation" id="menu_design_confirmation"
+                  parent="menu_granite_measurements_root" action="action_design_confirmation"
+                  sequence="4"/>
+
+        <menuitem name="Material Details" id="menu_material_details"
+                  parent="menu_granite_measurements_root" action="action_material_detail"
+                  sequence="5"/>
+
+        <menuitem name="Contract Preparations" id="menu_contract_preparation"
+                  parent="sale.sale_menu_root" action="action_contract_preparation_view"
+                  sequence="2"/>
+        <menuitem name="Manufacturing Installtion Process" id="menu_manufacturing_installation_process"
+                  parent="menu_granite_measurements_root" action="action_manufacturing_installation_process_view"
+                  sequence="7"/>
+
+        <menuitem name="Booking For Installation" id="menu_booking_for_installation"
+                  parent="menu_granite_measurements_root" action="action_booking_for_installation_view"
+                  sequence="7"/>
+    </data>
+</odoo>

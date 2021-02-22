@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="update_used_vacation_wizard">
+            <field name="name">update.used.vacation.form</field>
+            <field name="model">update.used.vacation</field>
+            <field name="arch" type="xml">
+                <form string="Update Used Leave">
+                    <group>
+                        <field name="update_type"/>
+                        <field name="last_vacation_date"
+                               attrs="{'invisible': [('update_type','=','manual')],'required': [('update_type','!=','manual')]}"/>
+                        <field name="used_vacation_days"
+                               attrs="{'invisible': [('update_type','!=','manual')],'required': [('update_type','=','manual')]}"/>
+                    </group>
+                    <footer>
+                        <button name="action_apply" type="object" string="Apply" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <act_window id="launch_session_wizard"
+                    name="Update Used Leave"
+                    src_model="hr.employee"
+                    res_model="update.used.vacation"
+                    view_mode="form"
+                    target="new"
+                    groups="hr.group_hr_manager"
+                    key2="client_action_multi"/>
+
+
+    </data>
+</openerp>
+

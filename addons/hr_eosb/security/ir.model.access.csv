@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eosb_eosb_hr_officer,eosb.eosb,model_eosb_eosb,hr.group_hr_user,1,1,1,1
+access_eosb_emp_type_hr_officer,eosb.emp.type,model_eosb_emp_type,hr.group_hr_user,1,1,1,1
+access_eosb_emp_type_resignation_hr_officer,eosb.emp.type.resignation,model_eosb_emp_type_resignation,hr.group_hr_user,1,1,1,1
+access_eosb_emp_type_termination_hr_officer,eosb.emp.type.termination,model_eosb_emp_type_termination,hr.group_hr_user,1,1,1,1
+access_hr_salary_rule,hr.salary.rule,hr_payroll.model_hr_salary_rule,hr.group_hr_user,1,1,1,1
+access_hr_salary_rule_category,hr.salary.rule.category,hr_payroll.model_hr_salary_rule_category,hr.group_hr_user,1,1,1,1
+access_hr_payslip_line,hr.payslip.line,hr_payroll.model_hr_payslip_line,hr.group_hr_user,1,1,1,1

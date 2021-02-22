@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="hr_rule_overtime" model="hr.salary.rule">
+            <field name="name">OverTime</field>
+            <field name="sequence" eval="1"/>
+            <field name="code">OverTime</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = employee.overtime_compute(payslip.employee, payslip.date_from, payslip.date_to, payslip.contract_id.wage, ['deduct_ot'])</field>
+        </record>
+
+
+    </data>
+</openerp>
+

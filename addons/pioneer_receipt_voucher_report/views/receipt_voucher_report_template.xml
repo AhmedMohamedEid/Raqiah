@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="receipt_voucher_template_00">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="pioneer_receipt_voucher_report.external_layout">
+                        <div class="page">
+                            <h3 class="text-center" style="color:#2980b9;font-weight:bold">ســـند قبـض</h3>
+                            <h3 class="text-center" style="color:#2980b9;font-weight:bold;">
+                                <span style="padding-bottom: 5px;border-bottom: 5px solid #2980b9;">Receipt Voucher
+                                </span>
+                            </h3>
+                            <br/>
+                            <br/>
+                            <div class="row text-center">
+                                <div class="col-3 text-left">
+                                    <strong style="padding-right:7px">Date</strong>
+                                    <t t-esc="o.payment_date"/>
+                                </div>
+                            </div>
+                            <div class="row mt32 mb32 text-center">
+                                <div class="col-3 text-left">
+                                    <strong>Received From Mrs</strong>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p t-esc="o.partner_id.name"/>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <strong> استلمنا من المكرم</strong>
+                                </div>
+                            </div>
+                            <div class="row mt32 mb32 text-center">
+                                <div class="col-3 text-left">
+                                    <strong>Amount</strong>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p t-esc="o.amount"/>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <strong> مبلغ وقدرة</strong>
+                                </div>
+                            </div>
+                            <div class="row mt32 mb32 text-center">
+                                <div class="col-1 text-left">
+                                    <strong>Bank</strong>
+                                </div>
+                                <div class="col-2 text-center">
+
+                                </div>
+                                <div class="col-2 text-right">
+                                    <strong> على بنك</strong>
+                                </div>
+                                <div class="col-3 text-left">
+                                    <strong>Cash / Cheque No</strong>
+                                </div>
+                                <div class="col-1 text-center">
+
+                                </div>
+                                <div class="col-3 text-right">
+                                    <strong> نقدا / شيك رقم</strong>
+                                </div>
+                            </div>
+                            <div class="row mt32 mb32 text-center">
+                                <div class="col-3 text-left">
+                                    <strong>Being</strong>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <p t-esc="o.communication"/>
+                                </div>
+                                <div class="col-3 text-right">
+                                    <strong>  وذلك مقابل</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+
+            </t>
+        </template>
+
+
+        <!-- QWeb Reports -->
+        <!-- NAME & FILE_NAME should be the same -->
+        <report
+                id="receipt_voucher_report_id_00"
+                model="account.payment"
+                report_type="qweb-pdf"
+                string="Receipt Voucher"
+                name="pioneer_receipt_voucher_report.receipt_voucher_template_00"
+                file="pioneer_receipt_voucher_report.receipt_voucher_template_00"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="web_external_layout_iherited"
+                  inherit_id="web.external_layout_standard" customize_show="True"
+                  name="Automatic Header">
+            <xpath expr="//div[@class='header']/div/div/img" position="replace">
+                <img t-if="user.branch_id.logo" t-att-src="image_data_uri(user.branch_id.logo)"
+                     style="max-height: 45px;"
+                     alt="Logo"/>
+            </xpath>
+            <xpath expr="//div[@class='header']/div[3]" position="replace">
+                <div class="col-6" name="user_branch_id">
+                    <div t-field="user.branch_id.name"
+                         t-options='{"no_marker": true}'/>
+                    <div t-field="user.branch_id.address"
+                         t-options='{"no_marker": true}'/>
+                </div>
+            </xpath>
+            <xpath expr="//div[@class='footer o_standard_footer']/div" position="replace">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <ul class="list-inline mb4">
+                        <li t-if="user.branch_id.telephone" class="list-inline-item">Phone:
+                            <span t-field="user.branch_id.telephone"/>
+                        </li>
+                        <li t-if="user.branch_id.email" class="list-inline-item">Email:
+                            <span t-field="user.branch_id.email"/>
+                        </li>
+                        <li t-if="user.branch_id.website" class="list-inline-item">Web:
+                            <span t-field="user.branch_id.website"/>
+                        </li>
+                        <li t-if="user.branch_id.vat" class="list-inline-item">Vat:
+                            <span t-esc="user.branch_id.vat.replace(' ','\N{NO-BREAK SPACE}')"/>
+                        </li>
+                    </ul>
+                    <div t-if="report_type == 'pdf'" class="text-muted">
+                        Page:
+                        <span class="page"/>
+                        /
+                        <span class="topage"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="web_internal_layout_iherited"
+                  inherit_id="web.internal_layout" customize_show="True"
+                  name="Automatic Header">
+            <xpath expr="//div[@class='header']/div/div[2]" position="replace">
+                <div class="col-2 offset-2 text-center">
+                    <span t-esc="user.branch_id.name"/>
+                </div>
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

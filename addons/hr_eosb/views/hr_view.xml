@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+
+        <record model="ir.ui.view" id="hr_hr_employee_view_form2">
+            <field name="name">hr.employee.eosb.form2</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_contract.hr_hr_employee_view_form2"/>
+            <field name="arch" type="xml">
+                <field name='medic_exam' position="after">
+                    <field name="eosb_emp_type_id"
+                           options="{'limit': 10, 'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

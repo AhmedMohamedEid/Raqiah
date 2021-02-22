@@ -1,0 +1,1157 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* pioneer_HR_Employee
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-03 09:29+0000\n"
+"PO-Revision-Date: 2019-12-03 09:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__document_count
+msgid "# Documents"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:mail.template,body_html:pioneer_HR_Employee.ps_email_template_employee_id_expiry
+msgid "<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Hi ${object.name}\n"
+"                        Your Employee ID are going to expiry in few days.\n"
+"                        Please make the necessary action.\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:mail.template,body_html:pioneer_HR_Employee.ps_email_template_list_employee_ids_expiry
+msgid "<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Hi,\n"
+"                        The attached list of employees ID's are going to expiry in few days.\n"
+"                        Please make the necessary action.\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__absent_leaves
+msgid "Absent"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,status:0
+msgid "Active"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__address_home
+msgid "Address in Home Country"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__address_ksa
+msgid "Address in KSA"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__annual_leave_type
+msgid "Annual Leave"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__annual_leave_period
+msgid "Annual Period(In Days)"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_company_form
+msgid "Apply To all companies"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_company_form
+msgid "Approval Permissions"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_company_form
+msgid "Are you sure want to apply this manager to across all companies."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__availed_leave
+msgid "Availed Leave"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__balance_leave
+msgid "Balance Leave"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__bank_account_id
+msgid "Bank Account Number"
+msgstr "رقم الحساب البنكي"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Birth"
+msgstr "الميلاد"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.family.details,relation_type:0
+msgid "Brother"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__emp_med
+msgid "Choose Employee Medical Class."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__kids_med
+msgid "Choose Kids Medical Class."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__wife_med
+msgid "Choose Wife Medical Class."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.ce_hr_employee_expiry_details_form
+msgid "Choose a file to attach..."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Citizenship & Other Information"
+msgstr "الجنسية و معلومات أخرى"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.contract,emp_med:0
+#: selection:hr.contract,kids_med:0
+#: selection:hr.contract,wife_med:0
+msgid "Class A"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.contract,emp_med:0
+#: selection:hr.contract,kids_med:0
+#: selection:hr.contract,wife_med:0
+msgid "Class B"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.contract,emp_med:0
+#: selection:hr.contract,kids_med:0
+#: selection:hr.contract,wife_med:0
+msgid "Class C"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_company_form
+msgid "Click this button to set a manager which applies across all companies"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.actions.act_window,help:pioneer_HR_Employee.action_ce_hr_employee_expiry_details
+msgid "Click to create Expiry Detail for this employee"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_res_company
+msgid "Companies"
+msgstr "المؤسسات"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__consumed_company_tickets
+msgid "Company Tickets Consumed"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__joined_date
+msgid "Computed Joining Date"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Contact Information"
+msgstr "معلومات التواصل"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__contract_date
+msgid "Contract Date"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__country_id
+msgid "Country"
+msgstr "دولة"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__create_uid
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__create_uid
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__create_date
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__create_date
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Current Location"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__birthday
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__dob
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__expiry_date
+msgid "Date of Expiry"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__issue_date
+msgid "Date of Issue"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__aj_date
+msgid "Date of Joined"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.family.details,relation_type:0
+msgid "Daughter"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: code:addons/pioneer_HR_Employee/models/ps_br_hr_employee.py:179
+#, python-format
+msgid "Details"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__display_name
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__display_name
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,marital:0
+#: selection:hr.family.details,marital:0
+msgid "Divorced"
+msgstr "مطلّق"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__work
+msgid "Duty Allowance"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__education
+msgid "Education"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_hr_employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__employee_id
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__employee_id
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_partner_form
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__emp_code
+msgid "Employee Code"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__emp_code_sort
+msgid "Employee Code Used For Sorting"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "Employee Description"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:mail.template,subject:pioneer_HR_Employee.ps_email_template_employee_id_expiry
+msgid "Employee ID Expiry"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "Employee ID and Name"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Employee Id"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__emp_med
+msgid "Employee Medical Class"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__employee_name
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__name
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: pioneer_HR_Employee
+#: model:ir.ui.menu,name:pioneer_HR_Employee.ps_menu_employee_self_services
+msgid "Employee Self Services"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_employee__bank_account_id
+msgid "Employee bank salary account"
+msgstr "الحساب البنكي لراتب الموظف"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "Employee code"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "Employee name"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_employee_tree1
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_employee__address_home_id
+msgid "Enter here the private address of the employee, not the one linked to your company."
+msgstr "أدخل هنا العنوان الخاص بالموظف، لا العنوان المرتبط بمؤسستك."
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,work_status:0
+msgid "Escape"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__exit_reentry_expense
+msgid "Exit / Re-entry Expense"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,status:0
+msgid "Expiry"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.actions.act_window,name:pioneer_HR_Employee.action_ce_hr_employee_expiry_details
+#: model:ir.model,name:pioneer_HR_Employee.model_hr_expiry_details
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__expiry_detail_ids
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.ce_hr_employee_expiry_details_form
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.ce_hr_employee_expiry_details_kanban
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.ce_hr_employee_expiry_details_tree
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "Expiry Details"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__is_reminder
+msgid "Expiry Reminder"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__is_reminder_mail_sent
+msgid "Expiry Reminder Mail Sent?"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_hr_family_details
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__family_ids
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "Family Details"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.family.details,relation_type:0
+msgid "Father"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,gender:0
+#: selection:hr.family.details,gender:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__file
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__filename
+msgid "File"
+msgstr "الملف"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,work_status:0
+msgid "Final Exit"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_res_company__finance_manager_id
+msgid "Finance Manager"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,work_status:0
+msgid "Fired"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__food
+msgid "Food"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__gender
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: pioneer_HR_Employee
+#: model:res.groups,name:pioneer_HR_Employee.group_hr_general_manager
+msgid "General Manager"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__gosi
+msgid "Gosi"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__gosi_applicable
+msgid "Gosi Applicable"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__gross
+msgid "Gross"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "HR Settings"
+msgstr "إعدادات الموارد البشرية"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__hrdf
+msgid "HRDF"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_res_users__is_hide_payslip
+msgid "Hide Payslip On Employee Form"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__housing
+msgid "Housing"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__id
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__id
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "ID/Iqama"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__exp_id_no
+msgid "ID/No."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_hr_id_type
+msgid "Id Type Master"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__identification_id
+msgid "Identification No"
+msgstr "الرقم القومي"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,type:0
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__iqama_no
+msgid "Iqama / National ID"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "Iqama Code"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__iqama_expense
+msgid "Iqama Expense"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_res_partner__is_employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_res_users__is_employee
+msgid "Is Employee?"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_res_partner__is_user
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_res_users__is_user
+msgid "Is User?"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__issue_by
+msgid "Issued By"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__kids_med
+msgid "Kids Medical Class"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details____last_update
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details____last_update
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__write_uid
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__write_uid
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__write_date
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__write_date
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__availed_leaves
+msgid "Leave"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,type:0
+msgid "License"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "License Number"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:mail.template,subject:pioneer_HR_Employee.ps_email_template_list_employee_ids_expiry
+msgid "List of Employee ID's Expiry"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__living_cost
+msgid "Living Cost"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__major
+msgid "Major"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,gender:0
+#: selection:hr.family.details,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__marital
+msgid "Marital Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,marital:0
+#: selection:hr.family.details,marital:0
+msgid "Married"
+msgstr "متزوّج"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__marital
+msgid "Martial status"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__medical_expense
+msgid "Medical Expense"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "Medical Insurance"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,type:0
+msgid "Meical Insurance"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_ir_ui_menu
+msgid "Menu"
+msgstr "القائمة"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.family.details,relation_type:0
+msgid "Mother"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,religion:0
+msgid "Muslim"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.actions.server,name:pioneer_HR_Employee.action_server_hr_employee_my_page
+#: model:ir.ui.menu,name:pioneer_HR_Employee.menu_open_view_employee_my
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "My Details"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.contract,emp_med:0
+#: selection:hr.contract,kids_med:0
+#: selection:hr.contract,wife_med:0
+msgid "N/A"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__name
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_id_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__name_arabic
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__name_arabic
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "Name in Arabic"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__net
+msgid "Net"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__no_payroll
+msgid "No Payroll"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__no_kids
+msgid "No of Kids"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,religion:0
+msgid "Non Muslim"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__no_ticekts_allowed_per_year
+msgid "Number of Tickets Allowed Per Year"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Office Location"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,gender:0
+#: selection:hr.family.details,relation_type:0
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__other
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Other Information ..."
+msgstr "معلومات أخرى..."
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,sponsor:0
+msgid "Other Sponsor"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,type:0
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_company_form
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_users_form
+msgid "Others"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,sponsor:0
+msgid "Our Sponsor"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.contract,annual_leave_type:0
+msgid "Paid"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,type:0
+msgid "Passport"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "Passport No."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__payroll_company_id
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__company_id
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "Payroll Company"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Payslip Computation Details"
+msgstr "تفاصيل احتساب إيصال المرتب"
+
+#. module: pioneer_HR_Employee
+#: code:addons/pioneer_HR_Employee/models/ps_br_hr_employee.py:428
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#, python-format
+msgid "Payslips"
+msgstr "إيصالات المرتبات"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,visa_type:0
+msgid "Permanent"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Personal Information"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__issue_place
+msgid "Place of Issue"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Position"
+msgstr "منصب"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__position_classification
+msgid "Position Classification"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__pregnent
+msgid "Pregnant"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__address_home_id
+msgid "Private Address"
+msgstr "العنوان الخاص"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "Public Information"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_ir_rule
+msgid "Record Rule"
+msgstr "تسجيل القاعدة"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Related User"
+msgstr "مستخدم مرتبط"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__relation_type
+msgid "Relation Type"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__religion
+msgid "Religion"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.actions.server,name:pioneer_HR_Employee.ps_ir_cron_employee_id_expiry_ir_actions_server
+#: model:ir.cron,cron_name:pioneer_HR_Employee.ps_ir_cron_employee_id_expiry
+#: model:ir.cron,name:pioneer_HR_Employee.ps_ir_cron_employee_id_expiry
+msgid "Reminder Scheduler To Employee About ID Expiry"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.actions.server,name:pioneer_HR_Employee.ps_ir_cron_list_employee_ids_expiry_ir_actions_server
+#: model:ir.cron,cron_name:pioneer_HR_Employee.ps_ir_cron_list_employee_ids_expiry
+#: model:ir.cron,name:pioneer_HR_Employee.ps_ir_cron_list_employee_ids_expiry
+msgid "Reminder Scheduler To Manager About ID Expiry"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__sinid
+msgid "SIN No"
+msgstr "رقم SIN"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__ssnid
+msgid "SSN No"
+msgstr "رقم SSN"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__sale
+msgid "Sale"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_res_users__is_hide_payslip
+msgid "Show Payslip Button on this checkbox, Hide when it is checked"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,marital:0
+#: selection:hr.family.details,marital:0
+msgid "Single"
+msgstr "أعزب"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_employee__sinid
+msgid "Social Insurance Number"
+msgstr "رقم التأمين الاجتماعي"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_employee__ssnid
+msgid "Social Security Number"
+msgstr "رقم الضمان الاجتماعي"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.family.details,relation_type:0
+msgid "Son"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_employee__religion
+msgid "Specify Religion of Employee."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__work
+msgid "Specify if the Duty Allowance."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__education
+msgid "Specify if the Education."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__food
+msgid "Specify if the Food."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__hrdf
+msgid "Specify if the HRDF Salary."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__housing
+msgid "Specify if the Housing."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__major
+msgid "Specify if the Major."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__mobile
+msgid "Specify if the Mobile."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_employee__no_payroll
+msgid "Specify if the No Payroll."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__other
+msgid "Specify if the Other."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__pregnent
+msgid "Specify if the Pregnant."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__sale
+msgid "Specify if the Sale Salary."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__transportation
+msgid "Specify if the Transportation."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_contract__tuition
+msgid "Specify if the Tuition."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__sponsor_company_id
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__sponsor
+msgid "Sponsor"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__sponsor_company_id
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_tree
+msgid "Sponsor Company"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__sponsor_name
+msgid "Sponsor Name"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_family_details__sponsor_no
+msgid "Sponsor Number"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__status
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "Status"
+msgstr "الحالة"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,visa_type:0
+msgid "Temporary"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: code:addons/pioneer_HR_Employee/models/ps_br_hr_employee.py:46
+#, python-format
+msgid "The user is not an employee."
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,help:pioneer_HR_Employee.field_hr_employee__family_ids
+msgid "This includeds IQAMA details"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__ticket_allowance
+msgid "Ticket Allowance"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__transportation
+msgid "Transportation"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__tuition
+msgid "Tuition"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__type_id
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.contract,annual_leave_type:0
+msgid "Un-Paid"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__used_leave
+msgid "Used Leave"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.pss_ce_view_partner_form
+msgid "User"
+msgstr "المستخدم"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model,name:pioneer_HR_Employee.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.contract,emp_med:0
+#: selection:hr.contract,kids_med:0
+#: selection:hr.contract,wife_med:0
+msgid "VIP"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,work_status:0
+msgid "Vacation"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,type:0
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "Visa"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__visa_exit_date
+msgid "Visa Exit Date"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_expiry_details__visa_type
+msgid "Visa Type"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,visa_type:0
+msgid "Visit"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,marital:0
+#: selection:hr.family.details,marital:0
+msgid "Widower"
+msgstr "أرمل"
+
+#. module: pioneer_HR_Employee
+#: selection:hr.family.details,relation_type:0
+msgid "Wife"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__wife_med
+msgid "Wife Medical Class"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.expiry.details,type:0
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_filter
+msgid "Work Permit"
+msgstr "تصريح عمل"
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_contract__work_permits_expense
+msgid "Work Permits Expense"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:ir.model.fields,field_description:pioneer_HR_Employee.field_hr_employee__work_status
+msgid "Work Status"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: selection:hr.employee,work_status:0
+msgid "Working"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.view_hr_fig_custom_form
+msgid "e.g. Part Time"
+msgstr "مثلًا: دوام جزئي"
+
+#. module: pioneer_HR_Employee
+#: model_terms:ir.ui.view,arch_db:pioneer_HR_Employee.custom_view_employee_form_new
+msgid "payslip"
+msgstr ""
+
+#. module: pioneer_HR_Employee
+#: model:res.groups,comment:pioneer_HR_Employee.group_hr_general_manager
+msgid "the user will have an access to the human resources configuration as well as statistic reports."
+msgstr ""
+

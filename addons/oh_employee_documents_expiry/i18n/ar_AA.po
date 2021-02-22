@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* oh_employee_documents_expiry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-03 09:24+0000\n"
+"PO-Revision-Date: 2019-12-03 09:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee__document_count
+msgid "# Documents"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:93
+#, python-format
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                           Click to Create for New Documents\n"
+"                        </p>"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: oh_employee_documents_expiry
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.employee_document_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_ir_attachment
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__doc_attachment_id
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_ir_attachment__doc_attach_rel
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__description
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.employee_document_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__name
+msgid "Document Number"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:45
+#, python-format
+msgid "Document-%s Expired On %s"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:86
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.hr_employee_document_inherit_form_view
+#, python-format
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.actions.server,name:oh_employee_documents_expiry.employee_data_reminder_ir_actions_server
+#: model:ir.cron,cron_name:oh_employee_documents_expiry.employee_data_reminder
+#: model:ir.cron,name:oh_employee_documents_expiry.employee_data_reminder
+msgid "Employee Document Expiration"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__employee_ref
+msgid "Employee Ref"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__expiry_date
+msgid "Expiry Date"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_hr_employee_document
+msgid "HR Employee Documents"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__issue_date
+msgid "Issue Date"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: oh_employee_documents_expiry
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.employee_document_view_search
+msgid "Search Employee Documents"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__doc_attachment_id
+msgid "You can attach the copy of your document"
+msgstr ""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__name
+msgid "You can give yourDocument number."
+msgstr ""
+

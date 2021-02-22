@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_payslip_ps">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="o" t-value="o.with_context(lang = o.company_id.partner_id.lang)"/>
+                <t t-call="web.external_layout">
+                    <div class="page">
+
+                        <div class="row mt32 mb32">
+                            <div class="col-xs-4">
+                                <p>
+                                    <t t-if="docs.f_date">
+                                        <strong>Date from :</strong>
+                                        <span t-esc="docs.f_date"/>
+                                        <br/>
+                                    </t>
+                                    <t t-if="docs.t_date">
+                                        <strong>Date to :</strong>
+                                        <span t-esc="docs.t_date"/>
+                                        <br/>
+                                    </t>
+                                    <t t-if="docs.company_id">
+                                        <strong>Company :</strong>
+                                        <span t-esc="docs.company_id.name"/>
+                                    </t>
+                                </p>
+                            </div>
+                            <div class="text-center col-xs-4">
+                                <span style="font-size: 20px;">
+                                    <b>Salary Statement</b>
+                                </span>
+                            </div>
+                            <div class="col-xs-4">
+                                <p>
+                                    <t t-if="docs.type">
+                                        <strong>Type :</strong>
+                                        <span t-esc="docs.type"/>
+                                        <br/>
+                                    </t>
+                                    <t t-if="docs.state">
+                                        <strong>State :</strong>
+                                        <span t-esc="docs.state"/>
+                                    </t>
+                                </p>
+                            </div>
+                        </div>
+
+                        <table class="table table-condensed oe_tbl_border" border="1">
+                            <thead>
+                                <tr rowspan="2">
+                                    <th colspan="2" class="oe_tbl_border"
+                                        style="border: 1px solid black;background-color:#d7d7d7 !important"></th>
+                                    <th colspan="12" class="text-center oe_tbl_border"
+                                        style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span style="font-size:20px">Addition</span>
+                                    </th>
+                                    <th colspan="8" class="text-center oe_tbl_border"
+                                        style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span style="font-size:20px">Deduction</span>
+                                    </th>
+                                </tr>
+                                <tr style="background-color:#d7d7d7 !important">
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span style="background-color:#d7d7d7 !important">ID</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Name</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Basic Salary</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Housing</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Transport</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Food</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Mobile</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Tuition</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Duty</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>OT</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Contracting Amount</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Other Allowance</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Other Allowance Adjustment</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Gross Salary</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>GOSI</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Advance</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Leave</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Other Deduction</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Loan</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Absent</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Total DED</span>
+                                    </th>
+                                    <th style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Net Salary</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="tot_basic" t-value="0.0"/>
+                                <t t-set="tot_hra" t-value="0"/>
+                                <t t-set="tot_ta" t-value="0"/>
+                                <t t-set="tot_food" t-value="0"/>
+                                <t t-set="tot_ma" t-value="0"/>
+                                <t t-set="tot_tuition" t-value="0"/>
+                                <t t-set="tot_work" t-value="0"/>
+                                <t t-set="tot_ot" t-value="0"/>
+                                <t t-set="tot_contracting_amount" t-value="0"/>
+                                <t t-set="tot_other_allowance" t-value="0"/>
+                                <t t-set="tot_other_allowance_adjustment" t-value="0"/>
+                                <t t-set="tot_gross" t-value="0"/>
+                                <t t-set="tot_gosi" t-value="0"/>
+                                <t t-set="tot_advance" t-value="0"/>
+                                <t t-set="tot_contrabsent" t-value="0"/>
+                                <t t-set="tot_hrdf" t-value="0"/>
+                                <t t-set="tot_other_deduction" t-value="0"/>
+                                <t t-set="tot_loan" t-value="0"/>
+                                <t t-set="tot_ded" t-value="0"/>
+                                <t t-set="tot_net" t-value="0"/>
+
+                                <tr t-foreach="payslips" t-as="p">
+                                    <td class="oe_tbl_border" style="border: 1px solid black;">
+                                        <span t-esc="(p.employee_id.emp_code and (p.employee_id.emp_code +' - ') or '')+p.employee_id.name"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <span t-esc="p.employee_id.namea"/>
+                                    </td>
+
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="basic" t-value="case.get_rule(p.id,'BASIC')"/>
+                                        <span t-esc="'{0:,.2f}'.format(basic)"/>
+                                        <t t-set="tot_basic" t-value="tot_basic + basic"/>
+                                    </td>
+
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="hra" t-value="case.get_rule(p.id,'HRA')"/>
+                                        <span t-esc="'{0:,.2f}'.format(hra)"/>
+                                        <t t-set="tot_hra" t-value=" tot_hra + hra"/>
+                                    </td>
+
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="ta" t-value="case.get_rule(p.id,'TRANSPORT')"/>
+                                        <span t-esc="'{0:,.2f}'.format(ta)"/>
+                                        <t t-set="tot_ta" t-value=" tot_ta + ta"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="food" t-value="case.get_rule(p.id,'FOOD')"/>
+                                        <span t-esc="'{0:,.2f}'.format(food)"/>
+                                        <t t-set="tot_food" t-value=" tot_food + food"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="ma" t-value="case.get_rule(p.id,'MOBILE')"/>
+                                        <span t-esc="'{0:,.2f}'.format(ma)"/>
+                                        <t t-set="tot_ma" t-value=" tot_ma + ma"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="tuition" t-value="case.get_rule(p.id,'TUITION')"/>
+                                        <span t-esc="'{0:,.2f}'.format(tuition)"/>
+                                        <t t-set="tot_tuition" t-value=" tot_tuition + tuition"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="work" t-value="case.get_rule(p.id,'DUTY')"/>
+                                        <span t-esc="'{0:,.2f}'.format(work)"/>
+                                        <t t-set="tot_work" t-value=" tot_work + work"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="ot" t-value="case.get_rule(p.id,'OT')"/>
+                                        <span t-esc="'{0:,.2f}'.format(ot)"/>
+                                        <t t-set="tot_ot" t-value=" tot_ot + ot"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="contracting_amount"
+                                           t-value="case.get_rule(p.id,'CONT.AMT')"/>
+                                        <span t-esc="'{0:,.2f}'.format(contracting_amount)"/>
+                                        <t t-set="tot_contracting_amount"
+                                           t-value=" tot_contracting_amount + contracting_amount"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="other_allowance" t-value="case.get_rule(p.id,'Others')"/>
+                                        <t t-set="other_allowance" t-value="other_allowance + p.contract_id.other"/>
+                                        <span t-esc="'{0:,.2f}'.format(other_allowance)"/>
+                                        <t t-set="tot_other_allowance"
+                                           t-value=" tot_other_allowance + other_allowance"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="other_allowance_adjustment"
+                                           t-value="case.get_rule(p.id,'other_allowance_adjustment')"/>
+                                        <span t-esc="'{0:,.2f}'.format(other_allowance_adjustment)"/>
+                                        <t t-set="tot_other_allowance_adjustment"
+                                           t-value=" tot_other_allowance_adjustment + other_allowance_adjustment"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="gross" t-value="case.get_rule(p.id,'GROSS')"/>
+                                        <span t-esc="'{0:,.2f}'.format(gross)"/>
+                                        <t t-set="tot_gross" t-value=" tot_gross + gross"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="gosi" t-value="case.get_rule(p.id,'GOSI')"/>
+                                        <span t-esc="'{0:,.2f}'.format(gosi)"/>
+                                        <t t-set="tot_gosi" t-value=" tot_gosi + gosi"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="advance" t-value="case.get_rule(p.id,'ADVANCE')"/>
+                                        <span t-esc="'{0:,.2f}'.format(advance)"/>
+                                        <t t-set="tot_advance" t-value=" tot_advance + advance"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="contrabsent" t-value="case.get_rule(p.id,'Leave')"/>
+                                        <span t-esc="'{0:,.2f}'.format(contrabsent)"/>
+                                        <t t-set="tot_contrabsent" t-value=" tot_contrabsent + contrabsent"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="other_deduction" t-value="case.get_rule(p.id,'Others-DED')"/>
+                                        <span t-esc="'{0:,.2f}'.format(other_deduction)"/>
+                                        <t t-set="tot_other_deduction"
+                                           t-value=" tot_other_deduction + other_deduction"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="loan" t-value="case.get_rule(p.id,'LOAN')"/>
+                                        <span t-esc="'{0:,.2f}'.format(case.get_rule(p.id,'loan'))"/>
+                                        <t t-set="tot_loan" t-value=" tot_loan + loan"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="hrdf" t-value="case.get_rule(p.id,'HRDF')"/>
+                                        <span t-esc="'{0:,.2f}'.format(hrdf)"/>
+                                        <t t-set="tot_hrdf" t-value=" tot_hrdf + hrdf"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="ded" t-value="case.get_total(p.id)"/>
+                                        <span t-esc="'{0:,.2f}'.format(ded)"/>
+                                        <t t-set="tot_ded" t-value=" tot_ded + ded"/>
+                                    </td>
+                                    <td style="border: 1px solid black;">
+                                        <t t-set="net" t-value="case.get_rule(p.id,'NET')"/>
+                                        <span t-esc="'{0:,.2f}'.format(net)"/>
+                                        <t t-set="tot_net" t-value=" tot_net + net"/>
+                                    </td>
+
+                                </tr>
+                                <tr style="background-color:#d7d7d7 !important">
+                                    <td colspan="2" style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span>Total</span>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_basic)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_hra)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_ta)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_food)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_ma)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_tuition)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_work)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_ot)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_contracting_amount)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_other_allowance)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_other_allowance_adjustment)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_gross)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_gosi)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_advance)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_contrabsent)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_hrdf)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_other_deduction)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_loan)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_ded)"/>
+                                    </td>
+                                    <td style="border: 1px solid black;background-color:#d7d7d7 !important">
+                                        <span t-esc="'{0:,.2f}'.format(tot_net)"/>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row mt32 mb32">
+                            <div class="col-xs-2 text-center">
+                                <span>Personnel Officer</span>
+                            </div>
+                            <div class="col-xs-2 text-center">
+                                <span>HR Manager</span>
+                            </div>
+                            <div class="col-xs-2 text-center">
+                                <span>Accountant</span>
+                            </div>
+                            <div class="col-xs-2 text-center">
+                                <span>Chief Accountant</span>
+                            </div>
+                            <div class="col-xs-2 text-center">
+                                <span>Finance Manager</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!--<template id="hr_payroll.report_payslip">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="o" t-value="o.with_context(lang = o.employee_id.user_id.partner_id.lang)"/>
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Pay Slip</h2>
+                        <p t-field="o.name"/>
+
+                        <table class="table table-condensed table-bordered">
+                            <tr>
+                                <td><strong>Name</strong></td>
+                                <td><span t-field="o.employee_id"/></td>
+                                <td><strong>Designation</strong></td>
+                                <td><span t-field="o.employee_id.job_id"/></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Address</strong></td>
+                                <td colspan="3">
+                                    <div t-field="o.employee_id.address_home_id"
+                                        t-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": True, "phone_icons": True}'/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Email</strong></td>
+                                <td><span t-field="o.employee_id.work_email"/></td>
+                                <td><strong>Identification No</strong></td>
+                                <td><span t-field="o.employee_id.identification_id"/></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reference</strong></td>
+                                <td><span t-field="o.number"/></td>
+                                <td><strong>Bank Account</strong></td>
+                                <td><span t-field="o.employee_id.bank_account_id"/></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Date From</strong></td>
+                                <td><span t-field="o.date_from"/></td>
+                                <td><strong>Date To</strong></td>
+                                <td><span t-field="o.date_to"/></td>
+                            </tr>
+                        </table>
+
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    &lt;!&ndash;<th>Code</th>&ndash;&gt;
+                                    <th>Name</th>
+                                    <th>Quantity/rate</th>
+                                    <th>Amount</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr t-foreach="o.line_ids.filtered(lambda line: line.appears_on_payslip)" t-as="line">
+                                    &lt;!&ndash;<td><span t-field="line.code"/></td>&ndash;&gt;
+                                    <td><span t-field="line.name"/></td>
+                                    <td><span t-field="line.quantity"/></td>
+                                    <td><span t-esc="line.amount"
+                                              t-esc-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+                                    <td><span t-esc="line.total"
+                                              t-esc-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p class="text-right"><strong>Authorized signature</strong></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>-->
+
+
+    <report
+            id="ps_br_report_expiry_details_report"
+            model="report.payslip_report_xls_ps.report_payslip_ps"
+            string="Payslip report"
+            report_type="qweb-pdf"
+            name="payslip_report_xls_ps.report_payslip_ps"
+            file="payslip_report_xls_ps.report_payslip_ps"
+            multi="True"
+    />
+
+</odoo>

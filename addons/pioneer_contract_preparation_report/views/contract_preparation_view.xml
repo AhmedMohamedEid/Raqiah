@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="contract_preparation_form_inherit_00" model="ir.ui.view">
+            <field name="name">contract preparation form inherit</field>
+            <field name="model">contract.preparation</field>
+            <field name="inherit_id" ref="granite_measurement.contract_preparation_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook" position="before">
+                    <group col="4" colspan="2">
+                        <field name="houd" string="الحوض" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="shifa" string="الشفة" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="nozol" string="النزول" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="color" string="لون الرخام" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="hinges" string="المفصلات" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="base" string="القاعدة" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="dalfa" string="الدرفه" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="number" string="رقم اللون" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="kitchen_type" string="نوع المطبخ" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="chatter" string="الماسكة" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="sheelf" string="الرف" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                    </group>
+                    <group col="2" colspan="1">
+                        <field name="financial_value" string="القيمة المالية" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="value_added_tax" string="ضريبة القيمة المضافة 15%" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                        <field name="total_value_of_contract" string="القيمة الإجمالية للتعاقد" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                    </group>
+                </xpath>
+
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

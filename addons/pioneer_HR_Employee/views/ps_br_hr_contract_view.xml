@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <!--inhirite in HR Contracts Type-->
+
+        <record id="hr_contract_type_view_form_fig" model="ir.ui.view">
+            <field name="name">hr.contract.type.view.form.fig</field>
+            <field name="model">hr.contract.type</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_type_view_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="contract_type" on_change="onchange_contract_type(contract_type, context)"/>
+                </field>
+                <field name="name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_bw_hr_contract_fig_custom_form" model="ir.ui.view">
+            <field name="name">view.bw.hr.contract.fig.custom.form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//group[@name="duration_group"]' position='after'>
+                    <group string="Allowances">
+                        <field name="housing"/>
+                        <field name="mobile"/>
+                        <field name="transportation"/>
+                        <field name="living_cost"/>
+                        <field name="annual_leave_period"/>
+                        <field name="ticket_allowance"/>
+                        <field name="medical_expense"/>
+                        <field name="other"/>
+                        <field name="no_ticekts_allowed_per_year"/>
+                        <field name="consumed_company_tickets"/>
+                        <field name="annual_leave_type"/>
+
+                    </group>
+                    <group string="Deductions">
+                        <field name="gosi_applicable"/>
+                        <field name="gosi"/>
+                    </group>
+                    <group string="Leaves/Absent">
+                        <field name="availed_leaves"/>
+                        <field name="absent_leaves"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_hr_contract_fig_custom_tree" model="ir.ui.view">
+            <field name="name">view.hr.contract.fig.custom.tree</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+            <field name="arch" type="xml">
+                <field name="employee_id" position="replace">
+                    <field name="employee_id" string="Employee ID"/>
+                    <field name="employee_name"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_pr_partner_appointment_calendar" model="ir.ui.view">
+            <field name="name">view_pr_partner_appointment_calendar</field>
+            <field name="model">pr.partner.appointment</field>
+            <field name="arch" type="xml">
+                <calendar string="Appointment" color="partner_id" date_start="appointment_date"
+                          date_stop="appointment_date">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="state" invisible="1"/>
+                </calendar>
+            </field>
+        </record>
+        <record id="view_pr_partner_appointment_filter" model="ir.ui.view">
+            <field name="name">view_pr_partner_appointment_filter</field>
+            <field name="model">pr.partner.appointment</field>
+            <field name="arch" type="xml">
+                <search string="Search OverTime">
+                    <field name="name"/>
+                    <separator/>
+                    <filter icon="terp-check" domain="[('state','=','draft')]" string="To Request" name="draft"/>
+                    <filter icon="terp-camera_test" domain="[('state','=','confirm')]" string="To Approve"
+                            name="confirm"/>
+                    <filter icon="terp-camera_test" domain="[('state','in',('approve','refuse'))]" string="Validated"
+                            name="validate"/>
+                    <filter icon="terp-camera_test" domain="[('state','=','cancel')]" string="Cancelled"
+                            name="request"/>
+                    <separator/>
+
+                    <group expand="0" string="Group By...">
+                        <filter name="group_name" string="Description" domain="[]" context="{'group_by':'name'}"/>
+                        <filter name="group_date_from" string="Date" domain="[]"
+                                context="{'group_by':'appointment_date'}"/>
+                        <filter name="group_partner" string="Customer" domain="[]"
+                                context="{'group_by':'partner_id'}"/>
+                        <filter name="group_status" string="Status" domain="[]" context="{'group_by':'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_pr_partner_appointment_tree" model="ir.ui.view">
+            <field name="name">view_pr_partner_appointment_tree</field>
+            <field name="model">pr.partner.appointment</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Appointment">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="appointment_date"/>
+                    <field name="appointment_time"/>
+                    <field name="co_ordination"/>
+                    <field name="state"/>
+                    <field name="company_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_pr_partner_appointment_form" model="ir.ui.view">
+            <field name="name">view_pr_partner_appointment_form</field>
+            <field name="model">pr.partner.appointment</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="OverTime Request" >
+                    <header>
+                        <button string="Confirm" name="action_confirm" type="object"
+                                class="oe_highlight"
+                                attrs="{'invisible':[('state','!=','draft')]}"/>
+                        <button string="Approve" name="action_approve" type="object" states="confirm"
+                                />
+                         <button string="Reset" name="action_reset_to_draft" type="object" states="cancel"
+                                />
+                        <button string="Refuse" name="action_refuse" type="object" states="draft,confirm"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,"
+                               statusbar_colors='{"confirm":"blue","draft":"red"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id"/>
+                                <field name="appointment_date"/>
+                                <field name="appointment_time"/>
+                                <field name="customer_mobile"/>
+                            </group>
+                            <group>
+                                <field name="company_id"/>
+                                <field name="co_ordination"/>
+                            </group>
+
+                        </group>
+                        <separator string="Remarks"/>
+                        <field name="remarks"/>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+
+            </field>
+        </record>
+
+
+        <!-- Action-->
+
+        <record id="action_view_pr_partner_appointment" model="ir.actions.act_window">
+            <field name="name">Appointments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pr.partner.appointment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="view_id" ref="view_pr_partner_appointment_filter"/>
+        </record>
+
+
+    </data>
+</openerp>

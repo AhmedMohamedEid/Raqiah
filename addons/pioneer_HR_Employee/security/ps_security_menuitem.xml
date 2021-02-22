@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <menuitem
+                id="menu_open_view_employee_my" name="My Details"
+                action="action_server_hr_employee_my_page"
+                parent="hr.menu_hr_root"
+                sequence="2"/>
+
+        <menuitem
+                id="hr.menu_open_view_employee_list_my"
+                action="hr.open_view_employee_list_my"
+                parent="hr.menu_hr_main"
+                sequence="1"/>
+        <!--NEW MENU ON EMPLOYEE SCREEN-->
+        <menuitem
+                id="ps_menu_employee_self_services"
+                name = "Employee Self Services"
+                parent="hr.menu_hr_root"
+                sequence="98"/>
+        <!--Overrided to change the sequence 0 to 1
+       <menuitem
+               id="hr.menu_hr_main"
+               name="Human Resources"
+               parent="hr.menu_hr_root"
+               sequence="1"/>-->
+
+
+        <!--REPORTING
+        <menuitem action="ps_br_action_expiry_details_report"
+                  id="ps_br_menu_expiry_details_report"
+                  parent="hr.menu_hr_reporting_timesheet"
+                  sequence="1"/>-->
+
+        <!--change the parent to hr deaprtemt. put in configuration-->
+        <menuitem
+            action="hr.open_module_tree_department"
+            id="hr.menu_hr_department_tree"
+            parent="hr.menu_human_resources_configuration"
+            sequence="9"
+            groups="hr.group_hr_user"/>
+
+    </data>
+</openerp>

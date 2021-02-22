@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* Pioneer_Customer_Modifications
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-03 09:07+0000\n"
+"PO-Revision-Date: 2019-12-03 09:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: Pioneer_Customer_Modifications
+#: model:ir.model,name:Pioneer_Customer_Modifications.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: Pioneer_Customer_Modifications
+#: model_terms:ir.ui.view,arch_db:Pioneer_Customer_Modifications.pm_res_partner_form
+msgid "Enter 10 digit Number without country code"
+msgstr ""
+
+#. module: Pioneer_Customer_Modifications
+#: model_terms:ir.ui.view,arch_db:Pioneer_Customer_Modifications.pm_res_partner_form
+msgid "Factory Visit"
+msgstr ""
+
+#. module: Pioneer_Customer_Modifications
+#: model:ir.model.fields,field_description:Pioneer_Customer_Modifications.field_res_partner__mobile
+#: model:ir.model.fields,field_description:Pioneer_Customer_Modifications.field_res_users__mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: Pioneer_Customer_Modifications
+#: model:ir.model.fields,field_description:Pioneer_Customer_Modifications.field_res_partner__visit_date
+#: model:ir.model.fields,field_description:Pioneer_Customer_Modifications.field_res_users__visit_date
+msgid "Visit Date"
+msgstr ""
+

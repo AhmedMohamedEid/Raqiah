@@ -1,0 +1,163 @@
+<odoo>
+    <data>
+        <!--MY DETIALS FORM-->
+        <record id="custom_view_employee_form_new" model="ir.ui.view">
+            <field name="name">custom.view.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="18"/>
+            <field name="arch" type="xml">
+                <form string="My Details">
+                    <sheet string="My Details">
+                        <div class="oe_button_box" name="button_box">
+                            <button name="button_show_my_payslip" help="payslip"
+                                    class="oe_stat_button"
+                                    icon="fa-money" invisible="1"
+                                    type="object">
+                                <field name="payslip_count" widget="statinfo" string="Payslips"
+                                       help="Payslip Computation Details"/>
+                            </button>
+                            <button name="toggle_active" type="object" groups="hr.group_hr_user"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+
+                            <button class="oe_stat_button" name="document_view" type="object" icon="fa-list-ol">
+                                <field string="Documents" name="document_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <field name="image" widget='image' class="oe_avatar"
+                               options='{"preview_image":"image_medium"}'/>
+                        <div class="oe_title">
+                            <label for="emp_code" class="oe_edit_only" string="Employee ID and Name"/>
+                            <h1>
+                                <field name="emp_code" class="oe_inline" placeholder="Employee Id"
+                                       style="width: 6em" required="1"/>
+                                -
+                                <field name="name" class="oe_inline" placeholder="Employee name"/>
+                                <field name="name_arabic" placeholder="Name in Arabic"/>
+                            </h1>
+                        </div>
+                        <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time"
+                               options="{'no_create_edit': True}" groups="hr.group_hr_user"/>
+                        <notebook>
+                            <page name="public" string="Public Information">
+                                <group>
+                                    <group string="Contact Information">
+                                        <field name="address_id" string="Current Location"
+                                               context="{'show_address': 1}"
+                                               options='{"always_reload": True, "highlight_first_line": True}'/>
+                                        <field name="mobile_phone"/>
+                                        <field name="work_email" widget="email"/>
+                                        <field name="work_phone"/>
+                                        <field name="work_location" string="Office Location"/>
+                                        <field name="aj_date"/>
+                                    </group>
+                                    <group string="Position">
+                                        <field name="department_id"/>
+                                        <field name="position_classification"/>
+                                        <field name="job_id"/>
+                                        <field name="parent_id"/>
+                                        <field name="coach_id"/>
+                                        <field name="resource_calendar_id"/>
+                                    </group>
+                                </group>
+                                <field name="notes" placeholder="Other Information ..." colspan="4"/>
+                            </page>
+                            <page name="personal_information" string="Personal Information">
+                                <group>
+                                    <group string="Citizenship &amp; Other Information">
+                                        <field name="country_id" options='{"no_open": True, "no_create": True}'/>
+                                        <field name="identification_id" groups="hr.group_hr_user" string="ID/Iqama"/>
+                                        <field name="passport_id" groups="hr.group_hr_user"/>
+                                        <field name="bank_account_id"
+                                               context="{'default_partner_id': address_home_id}"/>
+                                        <field name="religion"/>
+                                    </group>
+                                    <group string="Contact Information">
+                                        <field name="address_home_id"
+                                               context="{'show_address': 1}"
+                                               options='{"always_reload": True, "highlight_first_line": True}'/>
+                                    </group>
+                                    <group string="Status">
+                                        <field name="gender"/>
+                                        <field name="marital"/>
+                                    </group>
+                                    <group string="Birth">
+                                        <field name="birthday"/>
+                                        <field name="place_of_birth"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Family Details">
+                                <field name="family_ids" nolabel="1">
+                                    <tree string="Family Details" editable="top">
+                                        <field name="name"/>
+                                        <field name="name_arabic"/>
+                                        <field name="iqama_no"/>
+                                        <field name="dob"/>
+                                        <field name="gender"/>
+                                        <field name="marital"/>
+                                        <field name="relation_type"/>
+                                        <field name="country_id"/>
+                                        <field name="sponsor_name"/>
+                                        <field name="sponsor_no"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Expiry Details">
+                                <group>
+                                    <field name="expiry_detail_ids" mode="tree,kanban" nolabel="1"/>
+                                </group>
+                            </page>
+
+                            <page name="hr_settings" string="HR Settings" groups="hr.group_hr_user">
+                                <group>
+                                    <group string='Status' name="active_group">
+                                        <field name="company_id" groups="base.group_multi_company"/>
+                                        <field name="user_id" string="Related User"/>
+                                        <field name="work_status"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+
+            </field>
+        </record>
+
+        <record id="view_employee_tree1" model="ir.ui.view">
+            <field name="name">hr.employee.tree1</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="18"/>
+            <field name="arch" type="xml">
+                <tree string="Employees" decoration-bf="message_needaction==True">
+                    <field name="name"/>
+                    <field name="work_phone"/>
+                    <field name="work_email"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="parent_id"/>
+                    <field name="coach_id" invisible="1"/>
+                    <field name="message_needaction" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_server_hr_employee_my_page" model="ir.actions.server">
+            <field name="name">My Details</field>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="state">code</field>
+            <field name="code">action = model.action_open_my_page()</field>
+        </record>
+
+
+
+
+
+    </data>
+</odoo>

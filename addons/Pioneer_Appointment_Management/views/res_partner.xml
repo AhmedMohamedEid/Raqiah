@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="pr_pam_res_partner_form" model="ir.ui.view">
+            <field name="name">pr_pam_res_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//notebook" position="inside">
+                    <page string="Appointments" name="appointment">
+                        <field name="appoinment_ids" widget="one2many_list"
+                               mode="tree,kanban" nolabel="1"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+
+</odoo>

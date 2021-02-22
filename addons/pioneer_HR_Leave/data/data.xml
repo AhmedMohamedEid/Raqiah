@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record forcecreate="True" id="decimal_single" model="decimal.precision">
+            <field name="name">Decimal Single</field>
+            <field name="digits">1</field>
+        </record>
+
+        <record id="hr_rule_leave" model="hr.salary.rule">
+            <field name="name">Leave</field>
+            <field name="sequence" eval="1"/>
+            <field name="code">Leave</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = -(employee.leave_compute(payslip.employee, payslip.date_from,
+                payslip.date_to, ['deduct_salary', 'deduct_salary_leave']))
+            </field>
+        </record>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                       Default - Holiday Status
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <record model="hr.holidays.type.saudi" id="hrm_hr_holiday_type_saudi_excuse">
+            <field name="name">Excuse</field>
+            <field name="deduction_type">full_paid</field>
+            <field name="state">active</field>
+        </record>
+    </data>
+</openerp>

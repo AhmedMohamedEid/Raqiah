@@ -1,0 +1,1281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* granite_measurement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-09 23:04+0000\n"
+"PO-Revision-Date: 2019-12-09 23:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "<b>Customer Address:</b>"
+msgstr ""
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_needaction
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_needaction
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_needaction
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_needaction
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_needaction
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__active
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__active
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__active
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__active
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__active
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__activity_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__activity_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__activity_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__activity_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__activity_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__activity_state
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__activity_state
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__activity_state
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__activity_state
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__activity_state
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "Address"
+msgstr "العنوان"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__after_discount
+msgid "After Discount"
+msgstr "بعد الخصم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__aluminium
+msgid "Aluminium"
+msgstr "الألومنيوم"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.booking_for_installation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_attachment_count
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_attachment_count
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_attachment_count
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_attachment_count
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_attachment_count
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__before_discount
+msgid "Before Discount"
+msgstr "قبل الخصم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__blue_print_receive_date
+msgid "Blueprint Receive Date"
+msgstr "مخطط استلام التاريخ"
+
+#. module: granite_measurement
+#: model:ir.actions.act_window,name:granite_measurement.action_booking_for_installation_view
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_booking
+#: model:ir.ui.menu,name:granite_measurement.menu_booking_for_installation
+#: model_terms:ir.ui.view,arch_db:granite_measurement.booking_for_installation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.booking_for_installation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.booking_for_installation_view_tree
+msgid "Booking For Installation"
+msgstr "الحجز للتركيب"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_booking_rw
+msgid "Booking For Installation RW"
+msgstr "الحجز للتركيب RW"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_booking_rwc
+msgid "Booking For Installation RWC"
+msgstr "حجز لتركيب RWC"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_booking_installation
+msgid "Booking for installtion"
+msgstr "الحجز للتركيب"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: granite_measurement
+#: selection:contract.preparation,state:0
+msgid "Canceled"
+msgstr "ألغيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__cardboard_type
+msgid "Cardboard Type"
+msgstr "نوع الكرتون"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__city
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__city
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__city
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__city
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "City"
+msgstr "المدينة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__color
+msgid "Colour"
+msgstr "اللون"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__color_number
+msgid "Colour Number"
+msgstr "رقم اللون"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__colour_of_sink
+msgid "Colour of sink"
+msgstr "لون الحوض"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__column
+msgid "Column"
+msgstr "عمود"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__coming_down
+msgid "Coming Down"
+msgstr "نزول"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__company_id
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__company_id
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__second_party
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__company_id
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__company_id
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__company_id
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__confirm_reservation
+msgid "Confirm Reservation"
+msgstr "تأكيد الحجز"
+
+#. module: granite_measurement
+#: selection:contract.preparation,state:0
+msgid "Confirmed"
+msgstr "تم تأكيد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__connubial
+msgid "Connubial"
+msgstr "زيج"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__contour
+msgid "Contour"
+msgstr "كونتر"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__contour_of_depth
+msgid "Contour depth"
+msgstr "عمق الكونتر"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__name
+msgid "Contract"
+msgstr "العقد"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_form
+msgid "Contract Details"
+msgstr "تفاصيل العقد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__contract_preparation_line
+msgid "Contract Line"
+msgstr "خط العقد"
+
+#. module: granite_measurement
+#: model:ir.actions.act_window,name:granite_measurement.action_contract_preparation_view
+#: model:ir.model,name:granite_measurement.model_contract_preparation
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__contract_preparation_id
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_tree
+msgid "Contract Preparation"
+msgstr "إعداد العقد"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_contract_preparation_line
+msgid "Contract Preparation Line"
+msgstr ""
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_contract
+#: model:ir.ui.menu,name:granite_measurement.menu_contract_preparation
+msgid "Contract Preparations"
+msgstr "إعدادات العقد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_contract_rw
+msgid "Contract Preparations RW"
+msgstr "الاستعدادات للعقدRW"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_contract_rwc
+msgid "Contract Preparations RWC"
+msgstr "الاستعدادات العقد RWC"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__country_id
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__country_id
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__country_id
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__country_id
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "Country"
+msgstr "دولة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_contract_rwc
+msgid "Create Permission For Contract Preparations"
+msgstr "إنشاء تصريح لإعدادات العقد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_design_rwc
+msgid "Create Permission For Design Confirmation"
+msgstr "إنشاء تصريح لتأكيد التصميم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_granite_rwc
+msgid "Create Permission For Granite Measurement"
+msgstr "إنشاء تصريح لقياس الجرانيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_manufacturing_rwc
+msgid "Create Permission For Manufacturing Installtion Process"
+msgstr "إنشاء تصريح لتصنيع عملية التثبيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_material_rwc
+msgid "Create Permission For Material Details"
+msgstr "إنشاء تصريح للحصول على تفاصيل المواد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__create_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__create_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__create_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__create_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__create_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__create_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__create_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__create_date
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__create_date
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__create_date
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__create_date
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__create_date
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__create_date
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__create_date
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__customer_code
+msgid "Customer Code"
+msgstr "كود العميل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__customer_details
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__customer_details
+msgid "Customer Details"
+msgstr "تفاصيل العميل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__customer_name
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__partner_id
+msgid "Customer name"
+msgstr "اسم العميل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__date
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__date
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__date_signature
+msgid "Date Signature"
+msgstr "تاريخ التوقيع"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__day
+msgid "Day"
+msgstr "يوم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__depth_measurement
+msgid "Depth Measurement"
+msgstr "مقاس النزول"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__depth_of_sink
+msgid "Depth of sink"
+msgstr "عمق الحوض"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__design
+msgid "Design"
+msgstr "تصميم"
+
+#. module: granite_measurement
+#: model:ir.actions.act_window,name:granite_measurement.action_design_confirmation
+#: model:ir.model,name:granite_measurement.model_design_confirmation
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_design
+#: model:ir.ui.menu,name:granite_measurement.menu_design_confirmation
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_tree
+msgid "Design Confirmation"
+msgstr "إعدادات التصميم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_design_rw
+msgid "Design Confirmation RW"
+msgstr "تأكيد التصميم RW"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_design_rwc
+msgid "Design Confirmation RWC"
+msgstr "تأكيد التصميم RWC"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__designer_name
+msgid "Designer Name"
+msgstr "اسم المصمم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__designer_receive_date
+msgid "Designer Receive Date"
+msgstr "تاريخ استلام المصمم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__designer_submission_date
+msgid "Designer Submission Date"
+msgstr "تاريخ تقديم المصمم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__device_code
+msgid "Device Code"
+msgstr "كود الجهاز"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__device_measurement
+msgid "Device Measurement"
+msgstr "قياس الجهاز"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__display_name
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__display_name
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__display_name
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__display_name
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__display_name
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__display_name
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__display_name
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: granite_measurement
+#: selection:contract.preparation,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_booking_rw
+msgid "Edit Permission For Booking For Installation"
+msgstr "تحرير إذن للحجز للتثبيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_contract_rw
+msgid "Edit Permission For Contract Preparations"
+msgstr "تحرير إذن لإعدادات العقد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_design_rw
+msgid "Edit Permission For Design Confirmation"
+msgstr "تحرير إذن لتأكيد التصميم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_granite_rw
+msgid "Edit Permission For Granite Measurement "
+msgstr "تحرير إذن لقياس الجرانيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_manufacturing_rw
+msgid "Edit Permission For Manufacturing Installtion Process"
+msgstr "تحرير إذن لتصنيع عملية التثبيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_res_users__is_material_rw
+msgid "Edit Permission For Material Details"
+msgstr "تحرير إذن للحصول على تفاصيل المواد"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__email
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__email
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__email
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__employee_for_installation
+msgid "Employee for installation"
+msgstr "موظف للتثبيت"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.ps_gm_view_users_form
+msgid "Extra Access Rights/Permissions"
+msgstr "حقوق وصول إضافية / أذونات"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__file_no
+msgid "File No"
+msgstr "رقم الملف"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_follower_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_follower_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_follower_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_follower_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_follower_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_channel_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_channel_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_channel_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_channel_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_channel_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_partner_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_partner_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_partner_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_partner_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_partner_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__granite
+msgid "Granite"
+msgstr "غرانيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__granite_color
+msgid "Granite Color"
+msgstr "لون الرخام"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_granite
+#: model:ir.ui.menu,name:granite_measurement.menu_granite_measurement
+#: model:ir.ui.menu,name:granite_measurement.menu_granite_measurements_root
+msgid "Granite Measurement"
+msgstr "التصاميم"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_granite_measurement_details
+msgid "Granite Measurement Details"
+msgstr "تفاصيل قياس الجرانيت"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_granite_rw
+msgid "Granite Measurement RW"
+msgstr "قياس الجرانيت RW"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_granite_rwc
+msgid "Granite Measurement RWC"
+msgstr "قياس الجرانيت RWC"
+
+#. module: granite_measurement
+#: model:ir.actions.act_window,name:granite_measurement.action_granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_tree
+msgid "Granite Measurements"
+msgstr "التصاميم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__granite_type
+msgid "Granite Type"
+msgstr "نوع الجرانيت"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.booking_for_installation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_search
+msgid "Group By..."
+msgstr "تجميع حسب.."
+
+#. module: granite_measurement
+#: model:ir.module.category,description:granite_measurement.module_contract_preparation_category
+msgid "Helps you handle your lunch needs, if you are a manager you will be able to create new products, cashmoves and to confirm or cancel orders."
+msgstr "يساعدك على تلبية احتياجات الغداء الخاصة بك ، إذا كنت مديرًا ، فستكون قادرًا على إنشاء منتجات جديدة وكشوف نقدية وتأكيد أو إلغاء الطلبات."
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__id
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__id
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__id
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__id
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__id
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__id
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__id
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__message_unread
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__message_unread
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__message_unread
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__message_unread
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__message_unread
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__message_needaction
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__message_needaction
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__message_needaction
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__message_needaction
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__message_needaction
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__message_has_error
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__message_has_error
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__message_has_error
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__message_has_error
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__message_has_error
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_is_follower
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_is_follower
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_is_follower
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_is_follower
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_is_follower
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__kitchen_color
+msgid "Kitchen Colour"
+msgstr "لون المطبخ"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation____last_update
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation____last_update
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line____last_update
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation____last_update
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details____last_update
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process____last_update
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail____last_update
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__write_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__write_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__write_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__write_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__write_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__write_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__write_uid
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__write_date
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__write_date
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__write_date
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__write_date
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__write_date
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__write_date
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__write_date
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__line
+msgid "Line"
+msgstr "خط"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_main_attachment_id
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_main_attachment_id
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_main_attachment_id
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_main_attachment_id
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: granite_measurement
+#: model:res.groups,name:granite_measurement.group_contract_preparation_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: granite_measurement
+#: model:ir.actions.act_window,name:granite_measurement.action_manufacturing_installation_process_view
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_tree
+msgid "Manufacturing Installation Process"
+msgstr "عملية تركيب التصنيع"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_manufacturing_installation_process
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_manufacturing
+#: model:ir.ui.menu,name:granite_measurement.menu_manufacturing_installation_process
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+msgid "Manufacturing Installtion Process"
+msgstr "عملية تركيب التصنيع"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_manufacturing_rw
+msgid "Manufacturing Installtion Process RW"
+msgstr "عملية تركيب التصنيع RW"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_manufacturing_rwc
+msgid "Manufacturing Installtion Process RWC"
+msgstr "عملية تركيب التصنيع RWC"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_material
+#: model:ir.ui.menu,name:granite_measurement.menu_material_details
+msgid "Material Details"
+msgstr "تفاصيل المواد الخام"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_material_rw
+msgid "Material Details RW"
+msgstr "تفاصيل المواد الخام RW"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_res_users__is_material_rwc
+msgid "Material Details RWC"
+msgstr "تفاصيل المواد الخام RWC"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_search
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_tree
+msgid "Material details"
+msgstr "تفاصيل المواد"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_material_detail
+msgid "Material in Detail"
+msgstr "المواد الخام بالتفصيل"
+
+#. module: granite_measurement
+#: model:ir.actions.act_window,name:granite_measurement.action_material_detail
+msgid "Material in details"
+msgstr "المواد الخام بالتف"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_ir_ui_menu
+msgid "Menu"
+msgstr "القائمة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_has_error
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_has_error
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_has_error
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_has_error
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_has_error
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__missing_list_changes
+msgid "Missing List/Changes"
+msgstr "قائمة المفقودات / التغييرات"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__mobile
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__mobile
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__mobile
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__name
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__name
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__name
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__name
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__name
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__activity_date_deadline
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__activity_date_deadline
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__activity_date_deadline
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__activity_date_deadline
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__activity_date_deadline
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__activity_summary
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__activity_summary
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__activity_summary
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__activity_summary
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__activity_summary
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__activity_type_id
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__activity_type_id
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__activity_type_id
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__activity_type_id
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__activity_type_id
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: granite_measurement
+#: selection:booking.installation,pay_of_customer:0
+#: selection:booking.installation,review_with_contract_accounting:0
+msgid "No"
+msgstr "رقم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_needaction_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_needaction_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_needaction_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_needaction_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_needaction_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_has_error_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_has_error_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_has_error_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_has_error_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_has_error_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__message_needaction_counter
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__message_needaction_counter
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__message_needaction_counter
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__message_needaction_counter
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__message_needaction_counter
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__message_has_error_counter
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__message_has_error_counter
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__message_has_error_counter
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__message_has_error_counter
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__message_has_error_counter
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__message_unread_counter
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__message_unread_counter
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__message_unread_counter
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__message_unread_counter
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__message_unread_counter
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+msgid "Other Information"
+msgstr "معلومات أخرى"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_form
+msgid "Other info"
+msgstr "ملعومات اخرى"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__oven
+msgid "Oven"
+msgstr "مغاسل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__oven_type
+msgid "Oven type"
+msgstr "نوع الفرن"
+
+#. module: granite_measurement
+#: selection:booking.installation,activity_state:0
+#: selection:contract.preparation,activity_state:0
+#: selection:design.confirmation,activity_state:0
+#: selection:granite.measurement.details,activity_state:0
+#: selection:manufacturing.installation.process,activity_state:0
+#: selection:material.detail,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__first_party
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__pay_of_customer
+msgid "Pay Of Customer 50%"
+msgstr "دفع العملاء 50 ٪"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__payment_received
+msgid "Payment Received"
+msgstr "تلقى الدفع"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__payment_remaining
+msgid "Payment Remaining"
+msgstr "الدفع المتبقية"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__per_meter_price
+msgid "Per meter price"
+msgstr "سعر المتر"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__phone
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__phone
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__phone
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__phone
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__phone
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__place_of_depth
+msgid "Place df depth"
+msgstr "مكان مقاس النزول"
+
+#. module: granite_measurement
+#: selection:booking.installation,activity_state:0
+#: selection:contract.preparation,activity_state:0
+#: selection:design.confirmation,activity_state:0
+#: selection:granite.measurement.details,activity_state:0
+#: selection:manufacturing.installation.process,activity_state:0
+#: selection:material.detail,activity_state:0
+msgid "Planned"
+msgstr "منظم"
+
+#. module: granite_measurement
+#: model:ir.module.category,name:granite_measurement.module_contract_preparation_category
+msgid "Preparation Category"
+msgstr "فئة التحضير"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__printer
+msgid "Printer"
+msgstr "طابعة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__remarks
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.contract_preparation_view_form
+msgid "Reset To Draft"
+msgstr "إعادة التعيين إلى المسودة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__activity_user_id
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__activity_user_id
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__activity_user_id
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__activity_user_id
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__activity_user_id
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__review_with_contract_accounting
+msgid "Review Contract with Accouting"
+msgstr "مراجعة العقد مع المحاسب"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__sale_price
+msgid "Sale Price"
+msgstr "سعر البيع"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__sale_order_id
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__sales_person
+msgid "Sales Person"
+msgstr "مندوب مبيعات"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__shop_name
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__shop_name
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__shop_name
+msgid "Shop Name"
+msgstr "اسم  المتجر"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__shop_name
+msgid "Shop name"
+msgstr "اسم المتجر"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__side
+msgid "Side"
+msgstr "شفة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__side_descending_places
+msgid "Side Descending Places"
+msgstr "أماكن النزول الجانبى"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__side_slippers
+msgid "Side Slippers"
+msgstr "النعلات الجانبية"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__sink_type
+msgid "Sink Type"
+msgstr "نوع الحوض"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__sink_measurement
+msgid "Sink measurement"
+msgstr "مقاس الحوض"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__state_id
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__state_id
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__state_id
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__state_id
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "State"
+msgstr "الحالة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__activity_state
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__activity_state
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__activity_state
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__activity_state
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__activity_state
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__street
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__street
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__street
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "Street 2..."
+msgstr "الشارع 2..."
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "Street..."
+msgstr "الشارع..."
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__street2
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__street2
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__street2
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__street2
+msgid "Street2"
+msgstr "الشارع 2"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__sub_total_contract
+msgid "Sub Total Contract"
+msgstr "إجمالي العقد الفرعي"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__supplier_company
+msgid "Supplier Company"
+msgstr "الشركة الموردة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__supplier_company
+msgid "Supplier company"
+msgstr "الشركة الموردة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__description
+msgid "Terms/Conditions"
+msgstr "البنود و الظروف"
+
+#. module: granite_measurement
+#: selection:booking.installation,activity_state:0
+#: selection:contract.preparation,activity_state:0
+#: selection:design.confirmation,activity_state:0
+#: selection:granite.measurement.details,activity_state:0
+#: selection:manufacturing.installation.process,activity_state:0
+#: selection:material.detail,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__total_contract
+msgid "Total Contract"
+msgstr "العقد الكامل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation_line__total_meter
+msgid "Total Meter"
+msgstr "مجموع متر"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_type_sink
+msgid "Type Of Sink"
+msgstr "نوع الحوض"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_type_sink__name
+msgid "Type Of sink"
+msgstr "نوع الحوض"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__type_of_sink
+msgid "Type of sink"
+msgstr "نوع الحوض"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__type_of_work
+msgid "Type of work"
+msgstr "نوع العمل"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_unread
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_unread
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_unread
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_unread
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_unread
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__message_unread_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__message_unread_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__message_unread_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__message_unread_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__message_unread_counter
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: granite_measurement
+#: model:res.groups,name:granite_measurement.group_contract_preparation_user
+msgid "User"
+msgstr "المستخدم"
+
+#. module: granite_measurement
+#: model:ir.model,name:granite_measurement.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__vat
+msgid "Vat%5"
+msgstr "ضريبة القيمة المضافة 5٪"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__visit_day
+msgid "Visit Day"
+msgstr "يوم الزيارة"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_booking_installation__website_message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_contract_preparation__website_message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__website_message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__website_message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__website_message_ids
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: granite_measurement
+#: model:ir.model.fields,help:granite_measurement.field_booking_installation__website_message_ids
+#: model:ir.model.fields,help:granite_measurement.field_contract_preparation__website_message_ids
+#: model:ir.model.fields,help:granite_measurement.field_design_confirmation__website_message_ids
+#: model:ir.model.fields,help:granite_measurement.field_granite_measurement_details__website_message_ids
+#: model:ir.model.fields,help:granite_measurement.field_manufacturing_installation_process__website_message_ids
+#: model:ir.model.fields,help:granite_measurement.field_material_detail__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: granite_measurement
+#: selection:booking.installation,pay_of_customer:0
+#: selection:booking.installation,review_with_contract_accounting:0
+msgid "Yes"
+msgstr "نعم"
+
+#. module: granite_measurement
+#: code:addons/granite_measurement/models/contract_preparation.py:91
+#, python-format
+msgid "You dont have permission to cancel this record"
+msgstr "ليس لديك إذن بإلغاء هذا السجل"
+
+#. module: granite_measurement
+#: model_terms:ir.ui.view,arch_db:granite_measurement.design_confirmation_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.granite_measurement_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.manufacturing_installation_process_view_form
+#: model_terms:ir.ui.view,arch_db:granite_measurement.material_detail_view_form
+msgid "ZIP"
+msgstr "الرمز البريدي"
+
+#. module: granite_measurement
+#: model:ir.model.fields,field_description:granite_measurement.field_design_confirmation__zip
+#: model:ir.model.fields,field_description:granite_measurement.field_granite_measurement_details__zip
+#: model:ir.model.fields,field_description:granite_measurement.field_manufacturing_installation_process__zip
+#: model:ir.model.fields,field_description:granite_measurement.field_material_detail__zip
+msgid "Zip"
+msgstr "الرمز البريدي"
+
